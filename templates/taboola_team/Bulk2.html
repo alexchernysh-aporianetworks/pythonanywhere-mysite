@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taboola Bulk2 Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: left;
+            margin-bottom: 15px;
+
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dropdown Form Styles */
+        .form-container {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .form-container label {
+            margin-right: 10px;
+        }
+
+        .form-container select {
+            padding: 5px 10px;
+        }
+    </style>
+<html>
+<head>
+    <title>Taboola Bulk2 Page</title>
+</head>
+<body>
+
+
+            <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+
+    <h1>Welcome to the Taboola Bulk2 Page!</h1>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">maxbidstaboola Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_bulk2_tonic_taboolaoffers_script' %}">
+    <button type="submit">Run tonic-taboolaoffers Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_bulk2_rsoctoniccreateofferestaboola_script' %}">
+    <button type="submit">Run rsoctoniccreateofferestaboola Script</button>
+    </form>
+
+
+
+    </div>
+    </div>
+
+
+    <div class="section">
+        <h2 class="section-title">maxbidstaboola</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_bulk2_maxbidstaboola_UPCPCS1_script' %}">
+    <button type="submit">Run maxbidstaboola_UPCPCS1 Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_bulk2_maxbidstaboola_UPCPCRSOC_script' %}">
+    <button type="submit">Run maxbidstaboola_UPCPCRSOC Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_bulk2_maxbidstaboola_UPCPC_script' %}">
+    <button type="submit">Run maxbidstaboola_UPCPC Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_bulk2_maxbidstaboola_UPCPCINU_script' %}">
+    <button type="submit">Run maxbidstaboola_UPCPCINU Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">WTHMM-2025-Oz-New</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_bulk2_FKG_R_script' %}">
+    <button type="submit">Run FKG-R Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_bulk2_KWCity_R_script' %}">
+    <button type="submit">Run KWCity-R Script</button>
+    </form>
+
+
+
+
+    </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Update Campaign Codes</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_bulk2_tabduplicatorfortest_s1_script' %}">
+    <button type="submit">Update Campaign Codes S1 Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_bulk2_tabduplicatorfortest_Inuvo_script' %}">
+    <button type="submit">Update Campaign Codes Inuvo Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_bulk2_tabduplicatorfortest_AFD_script' %}">
+    <button type="submit">Update Campaign Codes AFD Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_bulk2_tabduplicatorfortest_RSOC_script' %}">
+    <button type="submit">Update Campaign Codes RSOC Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+
+</body>
+</html>

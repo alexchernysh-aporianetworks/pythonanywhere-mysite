@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outbrain Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: left;
+            margin-bottom: 15px;
+
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dropdown Form Styles */
+        .form-container {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .form-container label {
+            margin-right: 10px;
+        }
+
+        .form-container select {
+            padding: 5px 10px;
+        }
+    </style>
+<head>
+    <title>Outbrain Page</title>
+</head>
+<body>
+
+
+        <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+    <h1>Welcome to the Outbrain Page!</h1>
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Mediabuyers pages</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'outbrain_Bulk_page' %}">
+    <button type="submit">Bulk_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'outbrain_Slavo_page' %}">
+    <button type="submit">Slavo_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'outbrain_Jelena_page' %}">
+    <button type="submit">Jelena_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'outbrain_Dimitrije_page' %}">
+    <button type="submit">Dimitrije_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'outbrain_Bartek_page' %}">
+    <button type="submit">Bartek_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'outbrain_Ivana_Z_page' %}">
+    <button type="submit">Ivana_Z_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'outbrain_Ivana_K_page' %}">
+    <button type="submit">Ivana_K_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'outbrain_Nadja_page' %}">
+    <button type="submit">Nadja_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'outbrain_Nemanja_page' %}">
+    <button type="submit">Nemanja_page</button>
+    </form>
+
+
+    </div>
+    </div>
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">General Scripts</h2>
+        <div class="button-container">
+
+
+
+    <form method="get" action="{% url 'run_Outbrain_14_X_script' %}">
+    <button type="submit">Run Outbrain_14_X Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_inuvoyesob_script' %}">
+    <button type="submit">Run inuvoyesob Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_obyesinuvo_script' %}">
+    <button type="submit">Run obyesinuvo Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_obyes_script' %}">
+    <button type="submit">Run obyes Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_obcreativesl14_script' %}">
+    <button type="submit">Run obcreativesl14 Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_outbrainNeedToArchive_script' %}">
+    <button type="submit">Run Outbrain Need To Archive Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Compliance Scripts</h2>
+        <div class="button-container">
+
+
+
+    <form method="get" action="{% url 'run_outbrain_appealcompliancetonic_script' %}">
+    <button type="submit">Run outbrain_appealcompliancetonic Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_outbrain_appealcompliancetonic_NewStuff_script' %}">
+    <button type="submit">Run outbrain_appealcompliancetonic NewStuff Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_outbrain_getcomplianceidsfromtonic_script' %}">
+    <button type="submit">Run outbrain_getcomplianceidsfromtonic Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_outbraincomplianceupdater2025_script' %}">
+    <button type="submit">Run outbraincomplianceupdater2025 Script</button>
+    </form>
+
+
+
+
+    </div>
+    </div>
+
+
+
+</body>
+</html>

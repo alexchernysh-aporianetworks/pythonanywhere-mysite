@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: left;
+            margin-bottom: 15px;
+
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dropdown Form Styles */
+        .form-container {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .form-container label {
+            margin-right: 10px;
+        }
+
+        .form-container select {
+            padding: 5px 10px;
+        }
+    </style>
+<html>
+<head>
+    <title>Facebook</title>
+</head>
+<body>
+
+
+            <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+    <h1>Welcome to Bulk Page!</h1>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">General Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_DescriptionGPT_script' %}">
+        <button type="submit">Run DescriptionGPT Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_GoogleHeadlines3_script' %}">
+        <button type="submit">Run GoogleHeadlines3 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_Google__ImagesCutHeadlines3_script' %}">
+        <button type="submit">Run Google__ImagesCutHeadlines3 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_MediaGOAutoGPT_script' %}">
+        <button type="submit">Run MediaGOAutoGPT Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_MediaGoCreateAndCutImg_script' %}">
+        <button type="submit">Run MediaGoCreateAndCutImg Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_KWCityCheck_script' %}">
+        <button type="submit">Run KWCityCheck Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Symphony_create_script' %}">
+        <button type="submit">Run Symphony_create Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_videotozapcap_script' %}">
+        <button type="submit">Run videotozapcap Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_FKGCreateKW_script' %}">
+        <button type="submit">Run FKGCreateKW Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_VertCertDB_script' %}">
+        <button type="submit">Run VertCertDB Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_PolicyCheck_script' %}">
+        <button type="submit">Run PolicyCheck Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_MediaGo_ShortHeadlines_script' %}">
+        <button type="submit">Run MediaGo-ShortHeadlines Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_MatanKWdecoder_script' %}">
+        <button type="submit">Run MatanKWdecoder Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Jenia_creatives_builder_script' %}">
+        <button type="submit">Run run_Jenia_creatives_builder_script Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">WA RSOC Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_AutoCreativesWArsocHeadlines_script' %}">
+        <button type="submit">Run Auto Creatives WArsoc  Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_WARSOC_Auto_Creative_Create_IMG_script' %}">
+        <button type="submit">Run Auto Creatives Create IMG Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_WARSOC_Auto_Creative_Split_IMG_script' %}">
+        <button type="submit">Run Auto Creatives Split IMG Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_AutoCreativesWARSOC1_script' %}">
+        <button type="submit">Run Auto Creatives WARSOC 1 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_AutoCreativesWARSOC2_script' %}">
+        <button type="submit">Run Auto Creatives WARSOC 2 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_AutoCreativesWARSOC3_script' %}">
+        <button type="submit">Run Auto Creatives WARSOC 3 Script</button>
+    </form>
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">General Scripts</h2>
+        <div class="button-container">
+
+    <form method="get" action="{% url 'run_Danilo_videotozapcap_script' %}">
+        <button type="submit">Run Danilo videotozapcap Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_Danilo_Symphony_create_script' %}">
+        <button type="submit">Run Danilo Symphony_create Script</button>
+    </form>
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">Policy checker</h3>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_creative_bulk_newpolicycheckforall_script' %}">
+    <button type="submit">Run Policy checker Script</button>
+    </form>
+
+
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">KWDATA</h3>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_Jenia_newautogptforpanglework_script' %}">
+    <button type="submit">Run new auto gpt for pangle work Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_Jenia_keywordsitallpangle2025_script' %}">
+    <button type="submit">Run keyword sit all pangle 2025 Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+
+    </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">Policy checker-NewWay-Jenia</h3>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_Jenia_newpolicycheckforall_script' %}">
+    <button type="submit">Run new policy check for all Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Jenia_googlepolicychecker_script' %}">
+    <button type="submit">Run google policy checker Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Jenia_gcpgetdataforjenia_script' %}">
+    <button type="submit">Run gcp get data for jenia Script</button>
+    </form>
+
+
+
+    </div>
+    </div>
+</body>
+</html>

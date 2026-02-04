@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taboola Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: left;
+            margin-bottom: 15px;
+
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dropdown Form Styles */
+        .form-container {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .form-container label {
+            margin-right: 10px;
+        }
+
+        .form-container select {
+            padding: 5px 10px;
+        }
+    </style>
+<html>
+<head>
+    <title>Taboola Page</title>
+</head>
+<body>
+
+
+            <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+
+    <h1>Welcome to the Taboola Page!</h1>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Mediabuyers pages</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'taboola_Bulk_page' %}">
+    <button type="submit">Bulk_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'taboola_Bulk_3_page' %}">
+    <button type="submit">Bulk_3_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'taboola_Matan_page' %}">
+    <button type="submit">Matan_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'taboola_Omer_page' %}">
+    <button type="submit">Omer_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'media_buyer_Elad_page' %}">
+    <button type="submit">Elad_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'taboola_Elran_page' %}">
+    <button type="submit">Elran_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'taboola_Maya_page' %}">
+    <button type="submit">Maya_page</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'taboola_Or_page' %}">
+    <button type="submit">Or_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'taboola_Yoav_page' %}">
+    <button type="submit">Yoav_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'taboola_Dina_page' %}">
+    <button type="submit">Dina_page</button>
+    </form>
+
+
+    <!--    <form method="get" action="{% url 'taboola_Dor_page' %}">
+    <button type="submit">Dor_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'taboola_Ilana_page' %}">
+    <button type="submit">Ilana_page</button>
+    </form>
+
+    <!--    <form method="get" action="{% url 'taboola_Batel_page' %}">
+    <button type="submit">Batel_page</button>
+    </form> -->
+
+
+    <!--     <form method="get" action="{% url 'taboola_Nofar_page' %}">
+    <button type="submit">Nofar_page</button>
+    </form> -->
+
+
+    <form method="get" action="{% url 'taboola_Bulk2_page' %}">
+    <button type="submit">Bulk2_page</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">General Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_wandkeywords_script' %}">
+    <button type="submit">Run wandkeywords Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_SYSTEM_report_script' %}">
+    <button type="submit">Run SYSTEM report Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_all_taboola_budgets_bids_script' %}">
+    <button type="submit">Run all-taboola-budgets-bids Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_all_taboola_ids_script' %}">
+    <button type="submit">Run all-taboola-ids Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_autogpt_tabooladesc_script' %}">
+    <button type="submit">Run autogpt-tabooladesc Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_morning_script' %}">
+    <button type="submit">Run morning Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_newtabyes_max_script' %}">
+    <button type="submit">Run newtabyes-max Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_newtabyess1_script' %}">
+    <button type="submit">Run newtabyess1 Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tabautooptcr_script' %}">
+    <button type="submit">Run tabautooptcr Script</button>
+    </form>
+
+
+
+
+
+    <form method="get" action="{% url 'run_tabcreatives3_script' %}">
+    <button type="submit">Run tabcreatives3 Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_tabcreatives4_script' %}">
+    <button type="submit">Run tabcreatives4 Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_tabcreatives2_script' %}">
+    <button type="submit">Run tabcreatives2 Script</button>
+    </form>
+
+
+
+
+
+
+    <form method="get" action="{% url 'run_tabcreativesforall_script' %}">
+    <button type="submit">Run tabcreativesforall Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tabooladatabreakdown_script' %}">
+    <button type="submit">Run tabooladatabreakdown Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tabupdatemaxcpcbid_auto_script' %}">
+    <button type="submit">Run tabupdatemaxcpcbid-auto Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tonicdavid_script' %}">
+    <button type="submit">Run tonicdavid Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tabsitescr_script' %}">
+    <button type="submit">Run tabsitescr Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_newtabyess1_new_script' %}">
+    <button type="submit">Run newtabyess1_new Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_taboola_allaccounts_script' %}">
+    <button type="submit">Run taboola_allaccounts Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_systemnewreport_script' %}">
+    <button type="submit">Run systemnewreport Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tabupdatemaxcpcbid_script' %}">
+    <button type="submit">Run tabupdatemaxcpcbid Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_maxcpaandcpcbidstaboolaopt_script' %}">
+    <button type="submit">Run maxcpaandcpcbidstaboolaopt Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_pausetaboolal7nospend_script' %}">
+    <button type="submit">Run pausetaboolal7nospend Script</button>
+    </form>
+
+
+
+    </div>
+    </div>
+
+
+    <div class="section">
+        <h2 class="section-title">Wanduum</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_T2tonicrsocwanduumnew3finals_script' %}">
+    <button type="submit">Run T2tonicrsocwanduumnew3finals Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_T3wandrsoccreatives_script' %}">
+    <button type="submit">Run T3wandrsoccreatives Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_T4wandtonicrsoctab3days_script' %}">
+    <button type="submit">Run T4wandtonicrsoctab3days Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_T5wandtonicrsoctabyes_script' %}">
+    <button type="submit">Run T5wandtonicrsoctabyes Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_T6wanduumrsoctonicoffers_script' %}">
+    <button type="submit">Run T6wanduumrsoctonicoffers Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_newtabyes2wand_script' %}">
+    <button type="submit">Run newtabyes2wand Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_newtabyeswandnewfull_script' %}">
+    <button type="submit">Run newtabyeswandnewfull Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_newtabyeswandnewfull_3click_script' %}">
+    <button type="submit">Run newtabyeswandnewfull-3click Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tonic_wanduum_script' %}">
+    <button type="submit">Run tonic-wanduum Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tonic_wanduum_3click_script' %}">
+    <button type="submit">Run tonic-wanduum-3click Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tonicEPCtrackingWand_script' %}">
+    <button type="submit">Run tonicEPCtrackingWand Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tonicwandforopt_script' %}">
+    <button type="submit">Run tonicwandforopt Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tonicwanduumnew3finals_new_script' %}">
+    <button type="submit">Run tonicwanduumnew3finals_new Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Wanduum_Rsoc_copy_script' %}">
+    <button type="submit">Run Wanduum_Rsoc_copy to all sheets Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Tonic Rsoc</h2>
+        <div class="button-container">
+
+
+
+
+    <form method="get" action="{% url 'run_newtabyesrsoctonic_script' %}">
+    <button type="submit">Run newtabyesrsoctonic Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_rsoctonicapple_script' %}">
+    <button type="submit">Run rsoctonicapple Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+    <div class="section">
+        <h2 class="section-title">Inuvo</h2>
+        <div class="button-container">
+
+
+
+    <form method="get" action="{% url 'run_inuvonewtabyes_script' %}">
+    <button type="submit">Run inuvonewtabyes Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_inuvoyes_script' %}">
+    <button type="submit">Run inuvoyes Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+    <div class="section">
+        <h2 class="section-title">Explore</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_newtabyesexp_script' %}">
+    <button type="submit">Run newtabyesexp Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_texplore1_script' %}">
+    <button type="submit">Run texplore1 Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Compliance Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_bulk2_tonic_taboolaoffers_script' %}">
+    <button type="submit">Run tonic-taboolaoffers Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_gettingtaboolarsocids_script' %}">
+    <button type="submit">Run gettingtaboolarsocids Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_taboola_appealcompliancetonic_script' %}">
+    <button type="submit">Run taboola-appealcompliancetonic Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_taboola_getcomplianceidsfromtonic_script' %}">
+    <button type="submit">Run taboola-getcomplianceidsfromtonic Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_taboolacomplianceupdater2025_script' %}">
+    <button type="submit">Run taboolacomplianceupdater2025 Script</button>
+    </form>
+
+
+
+
+
+    </div>
+    </div>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Inuvo Compliance Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_gettingtaboolainuvoids_2025_script' %}">
+    <button type="submit">Run gettingtaboolainuvoids_2025 Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_taboola_getcomplianceidsfrominuvo_script' %}">
+    <button type="submit">Run taboola_getcomplianceidsfrominuvo Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_taboolacomplianceupdater_inuvo_2025_script' %}">
+    <button type="submit">Run taboolacomplianceupdater_inuvo_2025 Script</button>
+    </form>
+
+
+
+
+
+
+    </div>
+    </div>
+
+
+</body>
+</html>

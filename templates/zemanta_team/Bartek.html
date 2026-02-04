@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zemanta Bartek Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: left;
+            margin-bottom: 15px;
+
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dropdown Form Styles */
+        .form-container {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .form-container label {
+            margin-right: 10px;
+        }
+
+        .form-container select {
+            padding: 5px 10px;
+        }
+    </style>
+<html>
+<head>
+    <title>Zemanta Bartek Page</title>
+</head>
+<body>
+
+
+            <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+
+    <h1>Welcome to the Zemanta Bartek Page!</h1>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_Bartek_rsoctoniccreateoffereszemanta_script' %}">
+    <button type="submit">Run rsoctoniccreateofferesZemanta Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Bartek_tonic_zemantaoffers_script' %}">
+    <button type="submit">Run tonic_Zemantaoffers Script</button>
+    </form>
+
+
+
+    </div>
+    </div>
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">images cut Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_Bartek_imagescutob_dup22_script' %}">
+    <button type="submit">Run dup22 Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Bartek_imagescutob_dupinuvo_script' %}">
+    <button type="submit">Run dupinuvo Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Bartek_imagescutob_duprsoc_script' %}">
+    <button type="submit">Run duprsoc Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Bartek_imagescutob_dups1_script' %}">
+    <button type="submit">Run dups1 Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediago Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: left;
+            margin-bottom: 15px;
+
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dropdown Form Styles */
+        .form-container {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .form-container label {
+            margin-right: 10px;
+        }
+
+        .form-container select {
+            padding: 5px 10px;
+        }
+    </style><html>
+<head>
+    <title>Mediago</title>
+</head>
+<body>
+
+
+            <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+    <h1>Welcome to Mediago Page!</h1>
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Mediago S1</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_System_Report_MG_1_script' %}">
+        <button type="submit">Run System Report MG 1 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_mediagogetallcampaigns_1_script' %}">
+        <button type="submit">Run mediagogetallcampaigns 1 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_mediagoyes_1_script' %}">
+        <button type="submit">Run mediagoyes 1 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_mediagoopt_script' %}">
+        <button type="submit">Run mediagoopt Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_mediagocreatives_script' %}">
+        <button type="submit">Run mediagocreatives Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Create CMP S1</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_mediagocreatecmp_1_script' %}">
+        <button type="submit">Run mediagocreatecmp 1 Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Mediago Inuvo</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_mediagoyesinuvo_script' %}">
+        <button type="submit">Run mediagoyesinuvo Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_mediagogetallcampaignsinuvo_script' %}">
+        <button type="submit">Run mediagogetallcampaignsinuvo Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_inuvoyes_mediago_script' %}">
+        <button type="submit">Run inuvoyes-mediago Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_mediagooptinuvo_script' %}">
+        <button type="submit">Run mediagooptinuvo Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_mediagoinuvocreatives_script' %}">
+        <button type="submit">Run mediagoinuvocreatives Script</button>
+    </form>
+
+    </div>
+    </div>
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Create CMP Inuvo</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_mediagocreatecmpnewinuvo_script' %}">
+        <button type="submit">Run mediagocreatecmpnewinuvo Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

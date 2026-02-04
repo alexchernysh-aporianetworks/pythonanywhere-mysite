@@ -1,0 +1,7 @@
+<h1>Delete Scheduled Task</h1>
+<p>Are you sure you want to delete "{{ task.script_path }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, Delete</button>
+    <a href="{% url 'list_scheduled_tasks' %}">Cancel</a>
+</form>

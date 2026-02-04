@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kill Task</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #dc3545;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #c82333;
+        }
+
+        .status-message {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .status-message.success {
+            color: green;
+        }
+
+        .status-message.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kill Task</h1>
+
+    <div class="form-container">
+        <form method="post" action="{% url 'kill_task' %}">
+            {% csrf_token %}
+            <input type="text" name="task_id" placeholder="Enter Task ID" required>
+            <button type="submit">Kill Task</button>
+        </form>
+    </div>
+
+    {% if message %}
+    <div class="status-message {{ message_type }}">
+        {{ message }}
+    </div>
+    {% endif %}
+</body>
+</html>

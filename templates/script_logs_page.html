@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Run Logs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+            padding: 30px;
+            color: #2d3748;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 24px 0 16px 0;
+        }
+
+        /* Navigation Buttons */
+        .nav-container {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            background: white;
+            color: #4a5568;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .nav-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .nav-btn.primary:hover {
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+        }
+
+        /* View Toggle */
+        .view-toggle {
+            display: flex;
+            background: white;
+            border-radius: 12px;
+            padding: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 24px;
+            width: fit-content;
+        }
+
+        .view-toggle a {
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: #718096;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .view-toggle a:hover {
+            color: #4a5568;
+            background: #f7fafc;
+        }
+
+        .view-toggle a.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Filter Section */
+        .filter-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .filter-group label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            padding: 10px 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 14px;
+            min-width: 160px;
+            background: #f7fafc;
+            transition: all 0.2s ease;
+            color: #2d3748;
+        }
+
+        .filter-group select:focus,
+        .filter-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .filter-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-filter {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-filter.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-filter.primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-filter.secondary {
+            background: #edf2f7;
+            color: #4a5568;
+            text-decoration: none;
+        }
+
+        .btn-filter.secondary:hover {
+            background: #e2e8f0;
+        }
+
+        /* Table Card */
+        .table-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .table-header {
+            padding: 20px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .table-header h2 {
+            color: white;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: auto;
+        }
+
+        thead th {
+            padding: 16px 20px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #718096;
+            background: #f7fafc;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        tbody td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #edf2f7;
+            font-size: 14px;
+        }
+
+        tbody tr {
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f7fafc;
+        }
+
+        /* Status Colors */
+        .status-success {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%) !important;
+        }
+
+        .status-failed {
+            background: linear-gradient(135deg, #ffcccc 0%, #f5c6cb 100%) !important;
+        }
+
+        .status-partial {
+            background: linear-gradient(135deg, #fff5b1 0%, #ffeeba 100%) !important;
+        }
+
+        /* Badges */
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .badge-success { background: #c6f6d5; color: #22543d; }
+        .badge-danger { background: #fed7d7; color: #742a2a; }
+        .badge-warning { background: #fefcbf; color: #744210; }
+        .badge-secondary { background: #e2e8f0; color: #4a5568; }
+
+        /* Status Text */
+        .status-text-success { color: #22543d; font-weight: 600; }
+        .status-text-failed { color: #c53030; font-weight: 600; }
+
+        /* Group Row */
+        .group-row {
+            cursor: pointer;
+        }
+
+        .group-row:hover {
+            transform: scale(1.001);
+        }
+
+        .expand-arrow {
+            display: inline-flex;
+            width: 24px;
+            height: 24px;
+            align-items: center;
+            justify-content: center;
+            background: #edf2f7;
+            border-radius: 6px;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .expand-arrow.open {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Collapse Content */
+        .collapse-content {
+            display: none;
+        }
+
+        .collapse-content.show {
+            display: table-row;
+        }
+
+        .sub-table-wrapper {
+            background: #f7fafc;
+            padding: 16px 24px;
+        }
+
+        .sub-table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .sub-table table {
+            margin: 0;
+        }
+
+        .sub-table thead th {
+            background: #edf2f7;
+            padding: 12px 16px;
+            font-size: 11px;
+        }
+
+        .sub-table tbody td {
+            padding: 12px 16px;
+            font-size: 13px;
+        }
+
+        /* Script Path */
+        .script-path {
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 12px;
+            color: #667eea;
+            display: block;
+        }
+
+        /* Action Button */
+        .btn-action {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            background: #edf2f7;
+            color: #4a5568;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .btn-action:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            animation: fadeIn 0.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 20px;
+            width: 900px;
+            height: 600px;
+            min-width: 400px;
+            min-height: 300px;
+            max-width: 95vw;
+            max-height: 95vh;
+            overflow: hidden;
+            z-index: 1001;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+            animation: slideUp 0.3s ease;
+            resize: both;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes slideUp {
+            from { transform: translate(-50%, -45%); opacity: 0; }
+            to { transform: translate(-50%, -50%); opacity: 1; }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .modal-header h3 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .modal-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-size-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-size-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .modal-close {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .modal-body {
+            padding: 24px;
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .script-output {
+            background: #1a202c;
+            color: #a0aec0;
+            padding: 20px;
+            border-radius: 12px;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-break: break-all;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        /* Resize hint */
+        .resize-hint {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            font-size: 10px;
+            color: #a0aec0;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .resize-hint::after {
+            content: '⤡';
+            font-size: 14px;
+        }
+
+        /* Error Message */
+        .error-card {
+            background: linear-gradient(135deg, #ffcccc 0%, #f5c6cb 100%);
+            border-left: 4px solid #c53030;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            color: #742a2a;
+            font-weight: 500;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #a0aec0;
+        }
+
+        .empty-state span {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hide-tablet {
+                display: none !important;
+            }
+
+            thead th,
+            tbody td {
+                padding: 12px 10px;
+                font-size: 13px;
+            }
+
+            .script-path {
+                max-width: 120px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 16px; }
+            .filter-row { flex-direction: column; }
+            .filter-group { width: 100%; }
+            .filter-group select,
+            .filter-group input { width: 100%; min-width: auto; }
+            .modal-content {
+                width: 95vw;
+                height: 80vh;
+                min-width: 300px;
+            }
+
+            .hide-mobile {
+                display: none !important;
+            }
+
+            thead th,
+            tbody td {
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+
+            .script-path {
+                max-width: 80px;
+                font-size: 10px;
+            }
+
+            .badge {
+                padding: 3px 6px;
+                font-size: 10px;
+            }
+
+            .btn-action {
+                padding: 6px 10px;
+                font-size: 10px;
+            }
+
+            .expand-arrow {
+                width: 20px;
+                height: 20px;
+                font-size: 10px;
+            }
+
+            .sub-table-wrapper {
+                padding: 10px 12px;
+            }
+
+            .sub-table thead th,
+            .sub-table tbody td {
+                padding: 8px 6px;
+                font-size: 11px;
+            }
+
+            .table-header {
+                padding: 14px 16px;
+            }
+
+            .table-header h2 {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body { padding: 12px; }
+
+            h1 {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+
+            .view-toggle {
+                width: 100%;
+            }
+
+            .view-toggle a {
+                flex: 1;
+                justify-content: center;
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+
+            .nav-btn {
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+
+            .filter-card {
+                padding: 16px;
+            }
+
+            .hide-xs {
+                display: none !important;
+            }
+
+            thead th,
+            tbody td {
+                padding: 8px 5px;
+                font-size: 11px;
+            }
+
+            .badge {
+                padding: 2px 5px;
+                font-size: 9px;
+            }
+
+            .btn-action {
+                padding: 5px 8px;
+                font-size: 9px;
+            }
+
+            .script-path {
+                max-width: 60px;
+                font-size: 9px;
+            }
+
+            .sub-table thead th,
+            .sub-table tbody td {
+                padding: 6px 4px;
+                font-size: 10px;
+            }
+
+            .modal-header h3 {
+                font-size: 14px;
+            }
+
+            .modal-body {
+                padding: 16px;
+            }
+
+            .script-output {
+                font-size: 11px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Script Run Logs</h1>
+
+        {% if error %}
+        <div class="error-card">⚠️ {{ error }}</div>
+        {% endif %}
+
+        <!-- Navigation -->
+        <div class="nav-container">
+            <a href="{% url 'run_scripts_page' %}" class="nav-btn">🏠 Home</a>
+            <a href="{% url 'running_tasks' %}" class="nav-btn">⚡ Running Tasks</a>
+        </div>
+
+        <!-- View Toggle -->
+        <div class="view-toggle">
+            <a href="{% url 'script_logs_page' %}?view_mode=grouped{% if filters.date %}&date={{ filters.date }}{% endif %}{% if filters.general_label %}&general_label={{ filters.general_label }}{% endif %}{% if filters.status %}&status={{ filters.status }}{% endif %}"
+               class="{% if view_mode == 'grouped' %}active{% endif %}">
+                📁 Grouped View
+            </a>
+            <a href="{% url 'script_logs_page' %}?view_mode=individual{% if filters.date %}&date={{ filters.date }}{% endif %}{% if filters.general_label %}&general_label={{ filters.general_label }}{% endif %}{% if filters.status %}&status={{ filters.status }}{% endif %}"
+               class="{% if view_mode == 'individual' %}active{% endif %}">
+                📋 Individual View
+            </a>
+        </div>
+
+        <!-- Filters -->
+        <div class="filter-card">
+            <form method="get" action="{% url 'script_logs_page' %}">
+                <input type="hidden" name="view_mode" value="{{ view_mode }}">
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label>Date</label>
+                        <input type="date" name="date" id="dateFilter" value="{{ filters.date }}">
+                    </div>
+
+                    <div class="filter-group">
+                        <label>General Label</label>
+                        <select name="general_label">
+                            <option value="">All Labels</option>
+                            {% for gl in all_general_labels %}
+                            <option value="{{ gl }}" {% if filters.general_label == gl %}selected{% endif %}>{{ gl }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    {% if view_mode == 'individual' %}
+                    <div class="filter-group">
+                        <label>Label</label>
+                        <input type="text" name="label" value="{{ filters.label }}" placeholder="Search label...">
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Script</label>
+                        <input type="text" name="script" value="{{ filters.script }}" placeholder="Search script path...">
+                    </div>
+                    {% endif %}
+
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select name="status">
+                            <option value="">All</option>
+                            <option value="Success" {% if filters.status == 'Success' %}selected{% endif %}>✅ Success</option>
+                            <option value="Failed" {% if filters.status == 'Failed' %}selected{% endif %}>❌ Failed</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button type="submit" class="btn-filter primary">🔍 Filter</button>
+                        <a href="{% url 'script_logs_page' %}?view_mode={{ view_mode }}" class="btn-filter secondary">↺ Reset</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        {% if view_mode == 'grouped' %}
+        <!-- GROUPED VIEW -->
+        <div class="table-card">
+            <div class="table-header">
+                <h2>📁 Grouped Runs (Last 20)</h2>
+            </div>
+            {% if grouped_data %}
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 40px;"></th>
+                        <th>Timestamp</th>
+                        <th class="hide-mobile">General Label</th>
+                        <th class="hide-tablet">Mode</th>
+                        <th>Scripts</th>
+                        <th class="hide-xs">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for group in grouped_data %}
+                    <tr class="group-row
+                        {% if group.overall_status == 'Failed' %}status-failed{% endif %}
+                        {% if group.overall_status == 'Partial' %}status-partial{% endif %}
+                        {% if group.overall_status == 'Success' %}status-success{% endif %}"
+                        onclick="toggleGroup('group-{{ forloop.counter }}')">
+                        <td>
+                            <span id="arrow-group-{{ forloop.counter }}" class="expand-arrow">▶</span>
+                        </td>
+                        <td>{{ group.run_timestamp|date:"Y-m-d H:i:s" }}</td>
+                        <td class="hide-mobile"><strong>{{ group.general_label }}</strong></td>
+                        <td class="hide-tablet">{{ group.execution_mode }}</td>
+                        <td>
+                            <span class="badge badge-secondary">{{ group.total }} total</span>
+                            <span class="badge badge-success">{{ group.success }} ✓</span>
+                            <span class="badge badge-danger">{{ group.failed }} ✗</span>
+                        </td>
+                        <td class="hide-xs">
+                            <span class="badge badge-{% if group.overall_status == 'Success' %}success{% elif group.overall_status == 'Failed' %}danger{% else %}warning{% endif %}">
+                                {{ group.status_emoji }} {{ group.overall_status }}
+                            </span>
+                        </td>
+                    </tr>
+                    <tr id="group-{{ forloop.counter }}" class="collapse-content">
+                        <td colspan="6" style="padding: 0;">
+                            <div class="sub-table-wrapper">
+                                <div class="sub-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Label</th>
+                                                <th class="hide-mobile">Script</th>
+                                                <th>Status</th>
+                                                <th class="hide-tablet">Message</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for script in group.scripts %}
+                                            <tr>
+                                                <td>{{ script.label }}</td>
+                                                <td class="hide-mobile"><span class="script-path" title="{{ script.script_path }}">{{ script.script_path }}</span></td>
+                                                <td>
+                                                    {% if script.status == 'Success' %}
+                                                    <span class="status-text-success">✅</span>
+                                                    {% else %}
+                                                    <span class="status-text-failed">❌</span>
+                                                    {% endif %}
+                                                </td>
+                                                <td class="hide-tablet">{{ script.result_message|truncatechars:40 }}</td>
+                                                <td>
+                                                    <button class="btn-action" onclick="event.stopPropagation(); showOutput('{{ script.id }}', '{{ script.label|escapejs }}')">
+                                                        📄 View
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <div class="empty-state">
+                <span>📭</span>
+                <p>No grouped runs found</p>
+            </div>
+            {% endif %}
+        </div>
+
+        {% else %}
+        <!-- INDIVIDUAL VIEW -->
+        <div class="table-card">
+            <div class="table-header">
+                <h2>📋 Individual Script Runs (Last 100)</h2>
+            </div>
+            {% if individual_data %}
+            <table>
+                <thead>
+                    <tr>
+                        <th class="hide-tablet">ID</th>
+                        <th>Timestamp</th>
+                        <th class="hide-mobile">General Label</th>
+                        <th>Label</th>
+                        <th class="hide-tablet">Script</th>
+                        <th>Status</th>
+                        <th class="hide-mobile">Message</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for log in individual_data %}
+                    <tr class="{% if log.status == 'Success' %}status-success{% else %}status-failed{% endif %}">
+                        <td class="hide-tablet">{{ log.id }}</td>
+                        <td>{{ log.run_timestamp|date:"Y-m-d H:i:s" }}</td>
+                        <td class="hide-mobile">{{ log.general_label }}</td>
+                        <td>{{ log.label }}</td>
+                        <td class="hide-tablet"><span class="script-path" title="{{ log.script_path }}">{{ log.script_path }}</span></td>
+                        <td>
+                            {% if log.status == 'Success' %}
+                            <span class="status-text-success">✅</span>
+                            {% else %}
+                            <span class="status-text-failed">❌</span>
+                            {% endif %}
+                        </td>
+                        <td class="hide-mobile">{{ log.result_message|truncatechars:30 }}</td>
+                        <td>
+                            <button class="btn-action" onclick="showOutput('{{ log.id }}', '{{ log.label|escapejs }}')">
+                                📄 View
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <div class="empty-state">
+                <span>📭</span>
+                <p>No script runs found</p>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Modal -->
+    <div id="modalOverlay" class="modal-overlay" onclick="closeModal()">
+        <div id="modalContent" class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="modalTitle">Script Output</h3>
+                <div class="modal-header-actions">
+                    <button class="modal-size-btn" onclick="toggleModalSize()" title="Toggle fullscreen">⛶</button>
+                    <button class="modal-close" onclick="closeModal()">×</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div id="outputContent" class="script-output"></div>
+            </div>
+            <span class="resize-hint">Drag to resize</span>
+        </div>
+    </div>
+
+    <!-- Hidden outputs -->
+    {% for group in grouped_data %}
+        {% for script in group.scripts %}
+        <div id="output-{{ script.id }}" style="display: none;">{{ script.script_output|default:"No output available" }}</div>
+        {% endfor %}
+    {% endfor %}
+    {% for log in individual_data %}
+    <div id="output-{{ log.id }}" style="display: none;">{{ log.script_output|default:"No output available" }}</div>
+    {% endfor %}
+
+    <script>
+        // Set default date to today if no date is selected
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('dateFilter');
+            if (dateInput && !dateInput.value) {
+                const today = new Date();
+                const year = today.getFullYear();
+                const month = String(today.getMonth() + 1).padStart(2, '0');
+                const day = String(today.getDate()).padStart(2, '0');
+                dateInput.value = `${year}-${month}-${day}`;
+            }
+        });
+
+        function toggleGroup(groupId) {
+            const row = document.getElementById(groupId);
+            const arrow = document.getElementById('arrow-' + groupId);
+
+            if (row.classList.contains('show')) {
+                row.classList.remove('show');
+                arrow.classList.remove('open');
+                arrow.textContent = '▶';
+            } else {
+                row.classList.add('show');
+                arrow.classList.add('open');
+                arrow.textContent = '▼';
+            }
+        }
+
+        let isFullscreen = false;
+        const originalModalStyle = {
+            width: '900px',
+            height: '600px',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)'
+        };
+
+        function showOutput(id, label) {
+            const outputElement = document.getElementById('output-' + id);
+            const content = outputElement ? outputElement.textContent : 'No output available';
+
+            document.getElementById('modalTitle').textContent = 'Output: ' + label;
+            document.getElementById('outputContent').textContent = content;
+            document.getElementById('modalOverlay').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+
+            // Reset to original size when opening
+            const modal = document.getElementById('modalContent');
+            if (isFullscreen) {
+                isFullscreen = false;
+                modal.style.width = originalModalStyle.width;
+                modal.style.height = originalModalStyle.height;
+                modal.style.top = originalModalStyle.top;
+                modal.style.left = originalModalStyle.left;
+                modal.style.transform = originalModalStyle.transform;
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function toggleModalSize() {
+            const modal = document.getElementById('modalContent');
+
+            if (isFullscreen) {
+                // Return to normal size
+                modal.style.width = originalModalStyle.width;
+                modal.style.height = originalModalStyle.height;
+                modal.style.top = originalModalStyle.top;
+                modal.style.left = originalModalStyle.left;
+                modal.style.transform = originalModalStyle.transform;
+                isFullscreen = false;
+            } else {
+                // Go fullscreen
+                modal.style.width = '95vw';
+                modal.style.height = '95vh';
+                modal.style.top = '50%';
+                modal.style.left = '50%';
+                modal.style.transform = 'translate(-50%, -50%)';
+                isFullscreen = true;
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>

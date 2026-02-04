@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT Executor Form</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Form Section */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .form-container {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .form-container form {
+            margin-bottom: 15px;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        /* Start Button */
+        .form-container .start-button {
+            background-color: #28a745; /* Green */
+        }
+
+        .form-container .start-button:hover {
+            background-color: #218838;
+        }
+
+        /* Stop Button */
+        .form-container .stop-button {
+            background-color: #dc3545; /* Red */
+        }
+
+        .form-container .stop-button:hover {
+            background-color: #c82333;
+        }
+
+        /* Status and Error Messages */
+        .status-message {
+            text-align: center;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+
+        .status-message p {
+            margin: 5px 0;
+        }
+
+        .status-message .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="button" class="back-button" onclick="history.back()">⬅️ Back</button>
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+    <h1>Fill in the form to run the GPT executor</h1>
+    <h1>Please give access to: download@smart-surf-295322.iam.gserviceaccount.com</h1>
+
+    <div class="section">
+        <h2 class="section-title">Run Script</h2>
+        <div class="form-container">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="start-button">Run Script</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Stop Script</h2>
+        <div class="form-container">
+            <form method="post" action="{% url 'stop_script' %}">
+                {% csrf_token %}
+                <button type="submit" class="stop-button">Stop Script</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Display any status or error messages -->
+    <div class="status-message">
+        {% if status %}
+            <p>{{ status }}</p>
+        {% endif %}
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

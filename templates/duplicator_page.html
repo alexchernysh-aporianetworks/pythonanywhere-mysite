@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>duplicator Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: left;
+            margin-bottom: 15px;
+
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dropdown Form Styles */
+        .form-container {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .form-container label {
+            margin-right: 10px;
+        }
+
+        .form-container select {
+            padding: 5px 10px;
+        }
+    </style>
+<html>
+<head>
+    <title>duplicator Page</title>
+</head>
+<body>
+
+
+
+            <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+
+    <h1>Welcome to the duplicator Page!</h1>
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Taboola Duplicator Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_getalltaboolaidsfordup_script' %}">
+    <button type="submit">Run getalltaboolaidsfordup Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_getallcreativesfortabooladup_script' %}">
+    <button type="submit">Run getallcreativesfortabooladup Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_getallcampaignsdatafordup_script' %}">
+    <button type="submit">Run getallcampaignsdatafordup Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Outbrain Duplicator Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_getallcampaigndetailsforoutbraindup_script' %}">
+    <button type="submit">Run getallcampaigndetailsforoutbraindup Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_getallcreativesforoutbraindup_script' %}">
+    <button type="submit">Run getallcreativesforoutbraindup Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Facebook Duplicator Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_getallfbcreativesfordup_script' %}">
+    <button type="submit">Run getallfbcreativesfordup Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_getallfbdata_script' %}">
+    <button type="submit">Run getallfbdata Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tonicforfb_script' %}">
+    <button type="submit">Run tonicforfb Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Mediago Duplicator Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_copymediagodata_script' %}">
+    <button type="submit">Run copymediagodata Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Poppin Duplicator Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_copypoppindata_script' %}">
+    <button type="submit">Run copypoppindata Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Google Duplicator Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_l4daysgoogleduplicatordata_script' %}">
+    <button type="submit">Run l4daysgoogleduplicatordata Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Wthmm completer Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_wthmmduplicatorupdate_script' %}">
+    <button type="submit">Run wthmmduplicatorupdate Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_wthmmcompleter_script' %}">
+    <button type="submit">Run wthmmcompleter Script</button>
+    </form>
+
+
+
+
+    <form method="get" action="{% url 'run_wthmmduplicatorupdate_Google_script' %}">
+    <button type="submit">Run wthmm duplicator update_Google Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_wthmmduplicatorupdate_FB_script' %}">
+    <button type="submit">Run wthmm duplicator update_FB Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_wthmmduplicatorupdate_Taboola_script' %}">
+    <button type="submit">Run wthmm duplicator update_Taboola Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_wthmmduplicatorupdate_Outbrain_script' %}">
+    <button type="submit">Run wthmm duplicator update_Outbrain Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_wthmmduplicatorupdate_Poppin_script' %}">
+    <button type="submit">Run wthmm duplicator update_Poppin Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_wthmmduplicatorupdate_MediaGo_script' %}">
+    <button type="submit">Run wthmm duplicator update_MediaGo Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_wthmmduplicatorupdate_TikTok_script' %}">
+    <button type="submit">Run wthmm duplicator update_TikTok Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Wthmm completer Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_wthmmduplicatorupdate_script' %}">
+    <button type="submit">Run wthmmduplicatorupdate Script</button>
+    </form>
+
+
+
+    <form method="get" action="{% url 'run_wthmmcompleter_script' %}">
+    <button type="submit">Run wthmmcompleter Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

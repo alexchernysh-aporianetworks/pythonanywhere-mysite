@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Karmel - Daily Reports</title>
+</head>
+<body>
+    <h1>Run Daily Report Scripts</h1>
+
+    <form method="get" action="{% url 'run_facebook_script' %}">
+        <button type="submit">Run Facebook Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_google_script' %}">
+        <button type="submit">Run Google Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_tiktok_script' %}">
+        <button type="submit">Run TikTok Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_outbrain_script' %}">
+        <button type="submit">Run Outbrain Script</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto GPT Articles | Part 1</title>
+</head>
+<body>
+    <h1>Run or Stop Auto GPT Articles | Part 1</h1>
+
+    <!-- Button to start the script -->
+    <form method="post" action="{% url 'run_gpt_part1_script' %}">
+        {% csrf_token %}
+        <button type="submit">Run Script</button>
+    </form>
+
+    <!-- Button to stop the script -->
+    <form method="post" action="{% url 'stop_gpt_part1_script' %}">
+        {% csrf_token %}
+        <button type="submit">Stop Script</button>
+    </form>
+
+    <!-- Display status messages if available -->
+    {% if status %}
+        <p>{{ status }}</p>
+    {% endif %}
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

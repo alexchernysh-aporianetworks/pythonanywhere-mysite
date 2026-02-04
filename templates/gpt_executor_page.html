@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT Executor Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            opacity: 0.9;
+        }
+
+        /* Start Button */
+        .start-button {
+            background-color: #28a745; /* Green */
+        }
+
+        .start-button:hover {
+            background-color: #218838;
+        }
+
+        /* Stop Button */
+        .stop-button {
+            background-color: #dc3545; /* Red */
+        }
+
+        .stop-button:hover {
+            background-color: #c82333;
+        }
+
+        /* Navigation Buttons */
+        .nav-button {
+            background-color: #007bff;
+        }
+
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Status and Error Messages */
+        .status-message {
+            text-align: center;
+            font-size: 1em;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .status-message p {
+            margin: 5px 0;
+        }
+
+        .status-message .success {
+            color: #28a745;
+        }
+
+        .status-message .error {
+            color: #dc3545;
+        }
+
+        .status-message .info {
+            color: #17a2b8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+    <h1>Run GPT Executor Scripts</h1>
+
+    <!-- GPT Executor Section -->
+    <div class="section">
+        <h2 class="section-title">GPT Executor</h2>
+        <div class="button-container">
+            <a href="{% url 'process_form_page' %}">
+                <button class="nav-button">Go to GPT Executor</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Auto GPT Articles | Part 1 Section -->
+    <div class="section">
+        <h2 class="section-title">Auto GPT Articles | Part 1</h2>
+        <div class="button-container">
+            <form method="post" action="{% url 'run_gpt_part1_script' %}">
+                {% csrf_token %}
+                <button type="submit" class="start-button">Start Part 1</button>
+            </form>
+            <form method="post" action="{% url 'stop_gpt_part1_script' %}">
+                {% csrf_token %}
+                <button type="submit" class="stop-button">Stop Part 1</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Auto GPT Articles | Part 2 Section -->
+    <div class="section">
+        <h2 class="section-title">Auto GPT Articles | Part 2</h2>
+        <div class="button-container">
+            <form method="post" action="{% url 'run_gpt_part2_script' %}">
+                {% csrf_token %}
+                <button type="submit" class="start-button">Start Part 2</button>
+            </form>
+            <form method="post" action="{% url 'stop_gpt_part2_script' %}">
+                {% csrf_token %}
+                <button type="submit" class="stop-button">Stop Part 2</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Status and Error Messages Section -->
+    <div class="section">
+        <h2 class="section-title">Status Messages</h2>
+        <div class="status-message">
+            {% if status %}
+                <p class="success">✅ {{ status }}</p>
+            {% endif %}
+            {% if error %}
+                <p class="error">❌ {{ error }}</p>
+            {% endif %}
+            {% if info %}
+                <p class="info">ℹ️ {{ info }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+</html>

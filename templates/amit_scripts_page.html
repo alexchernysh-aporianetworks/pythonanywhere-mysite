@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: left;
+            margin-bottom: 15px;
+
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dropdown Form Styles */
+        .form-container {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .form-container label {
+            margin-right: 10px;
+        }
+
+        .form-container select {
+            padding: 5px 10px;
+        }
+    </style>
+<html>
+<head>
+    <title>Amit - Run Scripts</title>
+</head>
+<body>
+
+
+            <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+    <h1>Welcome to Amit's Scripts Page!</h1>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">General Scripts</h2>
+        <div class="button-container">
+
+    <form method="get" action="{% url 'run_newtabyes3_script' %}">
+        <button type="submit">Run newtabyes3 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_backupmaintonic_script' %}">
+        <button type="submit">Run backupmaintonic Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_obyesforreport_script' %}">
+        <button type="submit">Run obyesforreport Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_tonicrsocchannelscreator_script' %}">
+        <button type="submit">Run tonicrsocchannelscreator Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_tonicrsocchannelspixels_script' %}">
+        <button type="submit">Run tonicrsocchannelspixels Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_inuvoyesallyesterdaydata2025_script' %}">
+        <button type="submit">Run inuvoyesallyesterdaydata2025 Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_palaceupdate_script' %}">
+        <button type="submit">Run palaceupdate Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Run_SistersDB_script' %}">
+        <button type="submit">Run Run_SistersDB Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_compliance_siteids_script' %}">
+        <button type="submit">Run compliance_siteids Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_sisterscompliancepj_script' %}">
+        <button type="submit">Run sisterscompliancepj Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_systemnewreport_mobile_script' %}">
+        <button type="submit">Run systemnewreport_mobile Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_getkeywordsdata_script' %}">
+        <button type="submit">Run getkeywordsdata Script</button>
+    </form>
+
+
+   <!--    <form method="get" action="{% url 'run_topofferskeywordstonicnew2025_script' %}">
+        <button type="submit">Run topofferskeywordstonicnew2025 Script</button>
+    </form>-->
+
+    </div>
+    </div>
+
+
+
+    <!-- WTHMM Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Update Final Scripts</h2>
+        <div class="button-container">
+
+    <form method="get" action="{% url 'run_obyesforreport_final_script' %}">
+        <button type="submit">Run obyesforreport final script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_backupmaintonic_final_script' %}">
+        <button type="submit">Run backupmaintonic final Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_newtabyes_final_script' %}">
+        <button type="submit">Run newtabyes final Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_trafficclubyesdata_script' %}">
+        <button type="submit">Run Traffic Club yes data final Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tcyes_2Days_script' %}">
+        <button type="submit">Run Traffic Club 2Days data Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+
+    <!-- Creatives Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Creatives Scripts</h2>
+        <div class="button-container">
+
+    <form method="get" action="{% url 'run_allcreativestab_script' %}">
+        <button type="submit">Run allcreativestab Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_allobcreatives_script' %}">
+        <button type="submit">Run allobcreatives Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_allmediagocreatives_script' %}">
+        <button type="submit">Run allmediagocreatives Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemantacreativesall_script' %}">
+        <button type="submit">Run zemantacreativesall Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_poppincreatives_script' %}">
+        <button type="submit">Run poppincreatives Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_allfbcreatives_script' %}">
+        <button type="submit">Run allfbcreatives Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+    <!-- WTHMM Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">WTHMM Scripts</h2>
+        <div class="button-container">
+
+    <form method="get" action="{% url 'run_WTHIW_script' %}">
+        <button type="submit">Run WTHIW Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_WTHIW_Copysheets_script' %}">
+        <button type="submit">Run WTHIW-Copysheets Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+
+
+    <!-- WTHMM Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Policy Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_newpolicycheckforall_running_script' %}">
+        <button type="submit">Run newpolicycheckforall "running" Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_gen_newpolicycheckforall_script' %}">
+    <button type="submit">Run Gen Policy checker Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+
+    </div>
+    </div>
+
+
+    <!-- WTHMM Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Oz Scripts</h2>
+        <div class="button-container">
+
+    <form method="get" action="{% url 'run_copyarticlesdata_script' %}">
+        <button type="submit">Run copy articles data Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_copyarticlesdataexcs_script' %}">
+        <button type="submit">Run copy articles data excs Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+
+
+    <!-- WTHMM Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">WTHMM KW Scripts</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_Slavo_keywordsanalyze_script' %}">
+        <button type="submit">Run Slavo_keywordsanalyze "running" Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Slavo_keywordstokeywords_v3_script' %}">
+    <button type="submit">Run Slavo_keywordstokeywords_v3 Script</button>
+    </form>
+
+
+
+
+
+
+    <form method="get" action="{% url 'run_Matan_keywordsanalyze_script' %}">
+        <button type="submit">Run Matan_keywordsanalyze "running" Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_Matan_keywordstokeywords_v3_script' %}">
+    <button type="submit">Run Matan_keywordstokeywords_v3 Script</button>
+    </form>
+
+
+
+    </div>
+    </div>
+
+    <!-- WTHMM Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Karmel tests</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_tcyes_history_script' %}">
+        <button type="submit">Run tcyes_history "running" Script</button>
+    </form>
+
+
+
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+
+</body>
+</html>

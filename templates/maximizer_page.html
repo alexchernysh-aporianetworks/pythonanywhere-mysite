@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximizer Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: left;
+            margin-bottom: 15px;
+
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dropdown Form Styles */
+        .form-container {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .form-container label {
+            margin-right: 10px;
+        }
+
+        .form-container select {
+            padding: 5px 10px;
+        }
+    </style>
+<html>
+<head>
+    <title>maximizer Page</title>
+</head>
+<body>
+
+
+            <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+
+    <h1>Welcome to the maximizer Page!</h1>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">General Scripts</h2>
+        <div class="button-container">
+
+    <form method="get" action="{% url 'run_maximizer_createoffer_script' %}">
+    <button type="submit">Run maximizer_createoffer Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_maximizer_offersandverticals_script' %}">
+    <button type="submit">Run maximizer_offersandverticals Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_maximizerrevsites30days_script' %}">
+    <button type="submit">Run maximizerrevsites30days Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_maximizerrevyes_script' %}">
+    <button type="submit">Run maximizerrevyes Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_newtabyesmaximizer_script' %}">
+    <button type="submit">Run newtabyesmaximizer Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_tabautoopt_maximizer_script' %}">
+    <button type="submit">Run tabautoopt_maximizer Script</button>
+    </form>
+
+    </div>
+    </div>
+
+</body>
+</html>

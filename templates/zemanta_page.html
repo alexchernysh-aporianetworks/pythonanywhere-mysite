@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zemanta Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Home Button */
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: left;
+            margin-bottom: 15px;
+
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dropdown Form Styles */
+        .form-container {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .form-container label {
+            margin-right: 10px;
+        }
+
+        .form-container select {
+            padding: 5px 10px;
+        }
+    </style>
+<head>
+    <title>Zemanta Page</title>
+</head>
+<body>
+
+        <!-- Home Button -->
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+    <h1>Welcome to the Zemanta Page!</h1>
+
+
+    <!-- General Scripts Section -->
+    <div class="section">
+        <h2 class="section-title">Mediabuyers pages</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'zemanta_Bulk_page' %}">
+    <button type="submit">Bulk_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'zemanta_Bartek_page' %}">
+    <button type="submit">Bartek_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'zemanta_Nemanja_page' %}">
+    <button type="submit">Nemanja_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'zemanta_Petar_page' %}">
+    <button type="submit">Petar_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'zemanta_Dimitrije_page' %}">
+    <button type="submit">Dimitrije_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'zemanta_Nadja_page' %}">
+    <button type="submit">Nadja_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'zemanta_Slavo_page' %}">
+    <button type="submit">Slavo_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'zemanta_Ivana_Z_page' %}">
+    <button type="submit">Ivana Z_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'zemanta_Jelena_page' %}">
+    <button type="submit">Jelena_page</button>
+    </form>
+
+
+    <form method="get" action="{% url 'zemanta_Ivana_K_page' %}">
+    <button type="submit">Ivana_K_page</button>
+    </form>
+
+
+
+    </form>
+
+
+    </div>
+    </div>
+
+        <div class="section">
+        <h2 class="section-title">Daily Data</h2>
+        <div class="button-container">
+
+    <form method="get" action="{% url 'run_toniczemanta_2_script' %}">
+    <button type="submit">Run toniczemanta_2 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_toniczemanta2_2_script' %}">
+    <button type="submit">Run toniczemanta2_2 Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_zemantayes_script' %}">
+    <button type="submit">Run zemantayes Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemanta2D_script' %}">
+    <button type="submit">Run zemanta2D Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_invuozemantayes_script' %}">
+    <button type="submit">Run invuozemantayes Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemantainuvoleads_script' %}">
+    <button type="submit">Run zemantainuvoleads Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+
+    <div class="section">
+        <h2 class="section-title">GPT</h2>
+        <div class="button-container">
+
+    <form method="get" action="{% url 'run_imagescutob_zemanta_script' %}">
+    <button type="submit">Run imagescutob-zemanta Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_newuploader_imagescutob_zemanta_script' %}">
+    <button type="submit">Run new uploader imagescutob-zemanta Script</button>
+    </form>
+    </div>
+    </div>
+
+
+    <div class="section">
+        <h2 class="section-title">L3</h2>
+    <div class="button-container">
+
+    <form method="get" action="{% url 'run_zemanta3finals_andrea' %}">
+    <button type="submit">Run zemanta3finals_andrea Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemanta3finals_tonic_andrea' %}">
+    <button type="submit">Run zemanta3finals_tonic_andrea Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemantacreatives7days_andrea_script' %}">
+    <button type="submit">Run zemantacreatives7days-andrea Script</button>
+    </form>
+    </div>
+    </div>
+
+
+    <div class="section">
+        <h2 class="section-title">X</h2>
+        <div class="button-container">
+
+
+
+
+    <form method="get" action="{% url 'run_zemantaNeedToArchive_script' %}">
+    <button type="submit">Run Zemanta Need To Archive Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemantaarchived_1_script' %}">
+    <button type="submit">Run zemantaarchived_1 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemantadataforupload_script' %}">
+    <button type="submit">Run zemantadataforupload Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_Zemanta_L14_script' %}">
+    <button type="submit">Run Zemanta_L14 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemanta_whitelists_script' %}">
+    <button type="submit">Run zemanta-whitelists Script</button>
+    </form>
+    </div>
+    </div>
+
+
+    <div class="section">
+        <h2 class="section-title">Publishers Opt</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_zemanta_publishers_merged_script' %}">
+    <button type="submit">Run zemanta_publishers_merged Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_publishers_opt_BLACKLISTED_script' %}">
+    <button type="submit">Run publishers_opt_BLACKLISTED Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_publishers_opt_ENABLED_script' %}">
+    <button type="submit">Run publishers_opt_ENABLED Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemanta_publishers_merged_SOURCES_EXP_script' %}">
+    <button type="submit">Run zemanta_publishers_merged_SOURCES_EXP Script</button>
+    </form>
+    </div>
+    </div>
+
+
+
+
+    <div class="section">
+        <h2 class="section-title">zemantaccmps05112024</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_zemantaccmps05112024_CcmpsOB_script' %}">
+    <button type="submit">Run zemantaccmps05112024_CcmpsOB Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_zemantaccmps05112024_CcmpsOB2_script' %}">
+    <button type="submit">Run zemantaccmps05112024_CcmpsOB2 Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_zemantaccmps05112024_Ccmps_script' %}">
+    <button type="submit">Run zemantaccmps05112024_Ccmps Script</button>
+    </form>
+
+
+    <form method="get" action="{% url 'run_zemantaccmps05112024_CcmpsM_script' %}">
+    <button type="submit">Run zemantaccmps05112024_CcmpsM Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+
+    <div class="section">
+        <h2 class="section-title">Cadg</h2>
+        <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_zemantacads_Cadg_script' %}">
+    <button type="submit">Run zemantacads-Cadg Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemantacadg05112024_Cadg_script' %}">
+    <button type="submit">Run zemantacadg05112024-Cadg Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemantaopt_update_script' %}">
+    <button type="submit">Run zemantaopt_update Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+<div class="section">
+    <h2 class="section-title">Cadg2</h2>
+    <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_zemantacads_Cadg2_script' %}">
+    <button type="submit">Run zemantacads-Cadg2 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemantacadg05112024_Cadg2_script' %}">
+    <button type="submit">Run zemantacadg05112024-Cadg2 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemantaopt_update2_script' %}">
+    <button type="submit">Run zemantaopt_update2 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemantaopt_update3_script' %}">
+    <button type="submit">Run zemantaopt_update3 Script</button>
+    </form>
+
+    <form method="get" action="{% url 'run_zemantaopt_update4_script' %}">
+    <button type="submit">Run zemantaopt_update4 Script</button>
+    </form>
+
+    </div>
+    </div>
+
+
+<div class="section">
+    <h2 class="section-title">Opt</h2>
+    <div class="button-container">
+
+
+    <form method="get" action="{% url 'run_zemantaopt_script' %}">
+    <button type="submit">Run zemantaopt Script</button>
+    </form>
+
+
+    </div>
+    </div>
+
+</body>
+</html>

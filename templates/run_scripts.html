@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Reports</title>
+    <style>
+        :root {
+            --blue: #007bff;
+            --blue-hover: #0056b3;
+            --green: #28a745;
+            --green-hover: #1e7e34;
+            --bg: #f5f7fb;
+            --card: #ffffff;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+            --radius: 12px;
+            --gap: 16px;
+            --pad: 20px;
+            --maxw: 1100px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+        }
+
+        .page {
+            max-width: var(--maxw);
+            width: 100%;
+            padding: 40px 20px 60px;
+        }
+
+        h1 {
+            font-size: 28px;
+            line-height: 1.3;
+            text-align: center;
+            margin: 0;
+        }
+
+        .h1-sub {
+            text-align: center;
+            font-size: 14px;
+            color: var(--muted);
+            margin: 8px 0 28px;
+        }
+
+        h2.section-title {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            padding: var(--pad);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background-color: var(--card);
+            box-shadow: var(--shadow);
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        /* Center the table */
+        .table-wrap {
+            overflow: auto;
+            margin: 0 auto;
+            max-height: 420px;
+            max-width: 90%;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .sheet-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .sheet-table th {
+            background: #f2f2f2;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .sheet-table td {
+            padding: 10px;
+            border-bottom: 1px solid #f0f0f0;
+            text-align: center;
+        }
+
+        .sheet-table tr:hover td {
+            background: #fafafa;
+        }
+
+        /* Buttons centered */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--gap);
+            margin-top: 20px;
+        }
+
+        .button-container form {
+            flex: 1 1 200px;
+            max-width: 220px;
+        }
+
+        .button-container button {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            letter-spacing: .3px;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .button-container button:hover {
+            transform: translateY(-2px);
+        }
+
+        .task-button {
+            background-color: var(--green);
+            color: white;
+            border-color: var(--green);
+        }
+
+        .task-button:hover {
+            background-color: var(--green-hover);
+        }
+
+        .platform-button {
+            background-color: var(--blue);
+            color: white;
+            border-color: var(--blue);
+        }
+
+        .platform-button:hover {
+            background-color: var(--blue-hover);
+        }
+
+        @media (max-width: 768px) {
+            .button-container form {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Aporia Networks</h1>
+        <p class="h1-sub">Run tasks, view platforms, and check the Aporia newsletter below.</p>
+
+        <!-- Aporia Newsletter Section -->
+        <div class="section">
+            <h2 class="section-title">Aporia Newsletter</h2>
+            {% if sheet_error %}
+                <div style="color: #b00020; margin-bottom: 10px;">{{ sheet_error }}</div>
+            {% endif %}
+            <div class="table-wrap">
+                <table class="sheet-table">
+                    {% if sheet_data and sheet_data|length > 0 %}
+                        <thead>
+                            <tr>
+                                {% for cell in sheet_data.0 %}
+                                    <th>{{ cell }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in sheet_data|slice:"1:" %}
+                                <tr>
+                                    {% for cell in row %}
+                                        <td>{{ cell }}</td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    {% else %}
+                        <tbody>
+                            <tr><td>No data found.</td></tr>
+                        </tbody>
+                    {% endif %}
+                </table>
+            </div>
+        </div>
+
+        <!-- Tasks Section -->
+        <div class="section">
+            <!--  <h2 class="section-title">Tasks</h2>  -->
+            <div class="button-container">
+                <form method="get" action="{% url 'running_tasks' %}">
+                    <button type="submit" class="task-button">View Running Tasks</button>
+                </form>
+                <form method="get" action="{% url 'script_logs_page' %}">
+                    <button type="submit" class="task-button">View Scheduled scripts</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Platforms Section -->
+        <div class="section">
+            <h2 class="section-title">Platforms</h2>
+            <div class="button-container">
+                <form method="get" action="{% url 'gpt_executor_page' %}"><button class="platform-button">GPT Executor</button></form>
+                <form method="get" action="{% url 'amit_scripts_page' %}"><button class="platform-button">Amit</button></form>
+                <form method="get" action="{% url 'mediago_page' %}"><button class="platform-button">Mediago</button></form>
+                <form method="get" action="{% url 'outbrain_page' %}"><button class="platform-button">Outbrain</button></form>
+                <form method="get" action="{% url 'zemanta_page' %}"><button class="platform-button">Zemanta</button></form>
+                <form method="get" action="{% url 'taboola_page' %}"><button class="platform-button">Taboola</button></form>
+                <form method="get" action="{% url 'poppin_page' %}"><button class="platform-button">Poppin</button></form>
+                <form method="get" action="{% url 'maximizer_page' %}"><button class="platform-button">Maximizer</button></form>
+                <form method="get" action="{% url 'google_page' %}"><button class="platform-button">Google</button></form>
+                <form method="get" action="{% url 'facebook_page' %}"><button class="platform-button">Facebook</button></form>
+                <form method="get" action="{% url 'twitter_page' %}"><button class="platform-button">Twitter</button></form>
+                <form method="get" action="{% url 'newsbreak_page' %}"><button class="platform-button">Newsbreak</button></form>
+                <form method="get" action="{% url 'creative_page' %}"><button class="platform-button">Bulk</button></form>
+                <form method="get" action="{% url 'tiktok_page' %}"><button class="platform-button">Tiktok</button></form>
+                <form method="get" action="{% url 'amir_page' %}"><button class="platform-button">Amir</button></form>
+                <form method="get" action="{% url 'duplicator_page' %}"><button class="platform-button">Duplicator</button></form>
+                <form method="get" action="{% url 'sharon_page' %}"><button class="platform-button">Sharon</button></form>
+                <form method="get" action="{% url 'media_buyers_scripts' %}"><button class="platform-button">Media Buyers Pages</button></form>
+                <form method="get" action="{% url 'mgid_page' %}"><button class="platform-button">MGID</button></form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

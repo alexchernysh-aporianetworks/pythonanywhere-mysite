@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Status</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .task-details {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .task-details p {
+            margin: 10px 0;
+        }
+
+        .status-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .status-badge {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .status-pending { background-color: orange; }
+        .status-running { background-color: yellow; }
+        .status-completed { background-color: green; }
+        .status-failed { background-color: red; }
+
+        .output, .error {
+            white-space: pre-wrap;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        /* Back Button */
+        .back-button {
+            background-color: #6c757d;
+        }
+
+        .back-button:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button and Running Tasks Button -->
+    <div class="task-header">
+        <button type="button" class="back-button" onclick="history.back()">⬅️ Back</button>
+        <form method="get" action="{% url 'running_tasks' %}">
+            <button type="submit">View All Running Tasks</button>
+        </form>
+    </div>
+
+    <!-- Task Status Header -->
+    <div class="task-header">
+        <h2>Task Status</h2>
+    </div>
+
+    <!-- Task Details -->
+    <div class="task-details">
+        <p><strong>Task ID:</strong> {{ task_id }}</p>
+        <p><strong>Script Name:</strong> {{ script_name }}</p>
+        <p><strong>Status:</strong>
+            <div class="status-container">
+                <span class="status-badge
+                    {% if status == 'PENDING' %}status-pending
+                    {% elif status == 'RUNNING' %}status-running
+                    {% elif status == 'COMPLETED' %}status-completed
+                    {% elif status == 'FAILED' %}status-failed{% endif %}">
+                </span>
+                <span>{{ status }}</span>
+            </div>
+        </p>
+        <p><strong>Start Time:</strong> {{ created_at }}</p>
+        <p><strong>Last Updated:</strong> {{ updated_at }}</p>
+        <p><strong>Output:</strong></p>
+        <pre class="output">{{ output|default:"No output available." }}</pre>
+        <p><strong>Error:</strong></p>
+        <pre class="error">{{ error|default:"No errors reported." }}</pre>
+    </div>
+
+    <script>
+        // Auto-refresh every 5 seconds
+        setTimeout(() => {
+            location.reload();
+        }, 15000); // Refresh every 5 seconds
+    </script>
+</body>
+</html>

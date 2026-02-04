@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Already Running</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        p {
+            font-size: 16px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .home-button {
+            background-color: #4CAF50;
+        }
+        .tasks-button {
+            background-color: #2196F3;
+        }
+        .button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚠️ Script Already Running</h1>
+        <p>
+            The script <strong>"{{ script_name }}"</strong> is already running.<br>
+            Please wait until it completes or fails before running it again.
+        </p>
+        <p>Task ID: <strong>{{ task_id }}</strong></p>
+        <a href="/" class="button home-button">🏠 Home Page</a>
+        <a href="{% url 'running_tasks' %}" class="button tasks-button">📋 View Running Tasks</a>
+    </div>
+</body>
+</html>

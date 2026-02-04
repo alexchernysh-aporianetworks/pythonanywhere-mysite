@@ -1,0 +1,114 @@
+<style>
+    h2 {
+        margin-top: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Status-based Row Colors */
+    .status-failed {
+        background-color: #ffcccc; /* Light Red */
+    }
+
+    .status-running {
+        background-color: #fff5b1; /* Light Yellow */
+    }
+
+    .status-completed {
+        background-color: #d4edda; /* Light Green */
+    }
+
+    /* Button Styling */
+    .button-container {
+        display: flex;
+        gap: 10px; /* Space between buttons */
+        margin-bottom: 20px;
+    }
+
+    .button-container form {
+        margin: 0;
+    }
+
+    .button-container button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+    }
+
+    .button-container button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<!-- Buttons Section -->
+<div class="button-container">
+    <form method="get" action="{% url 'run_scripts_page' %}">
+        <button type="submit">Home</button>
+    </form>
+
+    <form method="get" action="{% url 'Kill_Task_page' %}">
+        <button type="submit">Kill_Task</button>
+    </form>
+</div>
+
+<h2>Last 50 Tasks</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Task ID</th>
+            <th>Script Name</th>
+            <th>Status</th>
+            <th>Started At</th>
+        </tr>
+    </thead>
+    <tbody>
+     {% for task in recent_tasks %}
+        <tr class="
+            {% if task.status == 'FAILED' %}status-failed{% endif %}
+            {% if task.status == 'RUNNING' %}status-running{% endif %}
+            {% if task.status == 'COMPLETED' %}status-completed{% endif %}
+        ">
+            <td><a href="{% url 'task_status' task.id %}">{{ task.id }}</a></td>
+            <td>{{ task.script_name }}</td>
+            <td>{{ task.status }}</td>
+            <td>{{ task.created_at }}</td>
+        </tr>
+     {% empty %}
+        <tr>
+            <td colspan="4">No recent tasks found.</td>
+        </tr>
+     {% endfor %}
+    </tbody>
+</table>
+
+<!-- Auto-refresh the page every 5 seconds -->
+<script>
+    setTimeout(() => {
+        location.reload();
+    }, 15000);  // Refresh every 5 seconds
+</script>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduled Tasks</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Header Container */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        /* Buttons Section */
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-button {
+            background-color: #6c757d;
+        }
+
+        .back-button:hover {
+            background-color: #5a6268;
+        }
+
+        /* Clock Styles */
+        .clock {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        /* Table Styles */
+        .task-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .task-table th, .task-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .task-table th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        .task-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .task-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .actions a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .actions a:hover {
+            text-decoration: underline;
+        }
+
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: white;
+        }
+
+        .status-active {
+            background-color: #28a745;
+        }
+
+        .status-inactive {
+            background-color: #dc3545;
+        }
+
+        .no-tasks {
+            text-align: center;
+            font-style: italic;
+            color: #888;
+        }
+
+        /* Section Dividers */
+        .section-divider {
+            margin-top: 40px;
+            border-top: 2px solid #ccc;
+            padding-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header-container">
+        <!-- Buttons on the Left -->
+        <div class="header-buttons">
+            <button type="button" class="back-button" onclick="history.back()">⬅️ Back</button>
+            <form method="get" action="{% url 'running_tasks' %}">
+                <button type="submit">View All Running Tasks</button>
+            </form>
+            <a href="/scheduled-tasks/add/">
+                <button type="button">➕ Add New Task</button>
+            </a>
+        </div>
+
+        <!-- Clock in the Middle -->
+        <div class="clock" id="clock">Current Time: --:--:--</div>
+    </div>
+
+    <!-- Scheduled Tasks Header -->
+    <h1>Scheduled Tasks</h1>
+
+    <!-- Custom Scheduled Tasks Table -->
+    <h2>Custom Scheduled Tasks</h2>
+    <table class="task-table">
+        <thead>
+            <tr>
+                <th>Script Path</th>
+                <th>Run Time</th>
+                <th>Timezone</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if custom_tasks %}
+                {% for task in custom_tasks %}
+                    <tr>
+                        <td>{{ task.script_path }}</td>
+                        <td>{{ task.run_time }}</td>
+                        <td>{{ task.timezone }}</td>
+                        <td>
+                            {% if task.is_active %}
+                                <span class="status-badge status-active">Active</span>
+                            {% else %}
+                                <span class="status-badge status-inactive">Inactive</span>
+                            {% endif %}
+                        </td>
+                        <td class="actions">
+                            <a href="/scheduled-tasks/edit/{{ task.id }}/">✏️ Edit</a>
+                            <a href="/scheduled-tasks/delete/{{ task.id }}/">🗑️ Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="5" class="no-tasks">No custom scheduled tasks found.</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Django-Q Scheduled Tasks Table -->
+    <h2>Django-Q Scheduled Tasks</h2>
+    <table class="task-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Function</th>
+                <th>Arguments</th>
+                <th>Schedule Type</th>
+                <th>Next Run</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if django_q_tasks %}
+                {% for task in django_q_tasks %}
+                    <tr>
+                        <td>{{ task.name }}</td>
+                        <td>{{ task.func }}</td>
+                        <td>{{ task.args }}</td>
+                        <td>{{ task.schedule_type }}</td>
+                        <td>{{ task.next_run }}</td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="5" class="no-tasks">No Django-Q scheduled tasks found.</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+    <!-- JavaScript for Clock -->
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = ${hours}:${minutes}:${seconds};
+            document.getElementById('clock').innerText = Current Time: ${timeString};
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        updateClock(); // Initialize immediately
+    </script>
+</body>
+</html>
