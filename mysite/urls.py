@@ -331,6 +331,12 @@ urlpatterns = [
 
 
 
+    # Opt
+
+
+    path('run_outbrainopt2026_script/', views.run_outbrainopt2026_script, name='run_outbrainopt2026_script'),
+
+
 
 ################### Facebook page
 

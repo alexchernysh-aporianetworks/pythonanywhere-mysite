@@ -1372,6 +1372,18 @@ def run_outbraincomplianceupdater2025_script(request):
 
 
 
+    # Opt
+
+
+
+
+def run_outbrainopt2026_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/Opt/outbrainopt2026.py"
+    return execute_script(request, script_path)
+
+
+
+
 ############## Facebook
 
 
