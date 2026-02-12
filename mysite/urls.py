@@ -102,6 +102,7 @@ urlpatterns = [
     # Karmel tests
 
     path('run_tcyes_history_script/', views.run_tcyes_history_script, name='run_tcyes_history_script'),
+    path('run_dailyfb_test_2_script/', views.run_dailyfb_test_2_script, name='run_dailyfb_test_2_script'),
 
 
 ################### Zemanta page
@@ -855,6 +856,14 @@ urlpatterns = [
     path('run_taboola_Elad__tchannels_createnew_script/', views.run_taboola_Elad__tchannels_createnew_script, name='run_taboola_Elad__tchannels_createnew_script'),
     path('run_taboola_Elad__tchannelsdb_script/', views.run_taboola_Elad__tchannelsdb_script, name='run_taboola_Elad__tchannelsdb_script'),
 
+
+
+    path('run_Elad_upload_taboola_creatives_S1_script/', views.run_Elad_upload_taboola_creatives_S1_script, name='run_Elad_upload_taboola_creatives_S1_script'),
+    path('run_Elad_upload_taboola_creatives_TC_script/', views.run_Elad_upload_taboola_creatives_TC_script, name='run_Elad_upload_taboola_creatives_TC_script'),
+    path('run_Elad_upload_taboola_creatives_RSOC_script/', views.run_Elad_upload_taboola_creatives_RSOC_script, name='run_Elad_upload_taboola_creatives_RSOC_script'),
+    path('run_Elad_upload_taboola_creatives_Inuvo_script/', views.run_Elad_upload_taboola_creatives_Inuvo_script, name='run_Elad_upload_taboola_creatives_Inuvo_script'),
+
+
     # Taboola page - Elran
 
     path('taboola_Elran/', views.taboola_Elran_page, name='taboola_Elran_page'),
@@ -877,6 +886,13 @@ urlpatterns = [
     path('run_taboola_Elran__tchannels_createnew_script/', views.run_taboola_Elran__tchannels_createnew_script, name='run_taboola_Elran__tchannels_createnew_script'),
     path('run_taboola_Elran__tchannelsdb_script/', views.run_taboola_Elran__tchannelsdb_script, name='run_taboola_Elran__tchannelsdb_script'),
 
+
+
+    path('run_Elran_upload_taboola_creatives_S1_script/', views.run_Elran_upload_taboola_creatives_S1_script, name='run_Elran_upload_taboola_creatives_S1_script'),
+    path('run_Elran_upload_taboola_creatives_TC_script/', views.run_Elran_upload_taboola_creatives_TC_script, name='run_Elran_upload_taboola_creatives_TC_script'),
+    path('run_Elran_upload_taboola_creatives_RSOC_script/', views.run_Elran_upload_taboola_creatives_RSOC_script, name='run_Elran_upload_taboola_creatives_RSOC_script'),
+    path('run_Elran_upload_taboola_creatives_Inuvo_script/', views.run_Elran_upload_taboola_creatives_Inuvo_script, name='run_Elran_upload_taboola_creatives_Inuvo_script'),
+
     # Taboola page - Maya
 
     path('taboola_Maya/', views.taboola_Maya_page, name='taboola_Maya_page'),
@@ -894,6 +910,12 @@ urlpatterns = [
     path('run_Maya_tabduplicatorfortest_AFD_script/', views.run_Maya_tabduplicatorfortest_AFD_script, name='run_Maya_tabduplicatorfortest_AFD_script'),
     path('run_Maya_tabduplicatorfortest_RSOC_script/', views.run_Maya_tabduplicatorfortest_RSOC_script, name='run_Maya_tabduplicatorfortest_RSOC_script'),
     path('run_Maya_tabduplicatorfortest_TC_script/', views.run_Maya_tabduplicatorfortest_TC_script, name='run_Maya_tabduplicatorfortest_TC_script'),
+
+
+    path('run_Maya_upload_taboola_creatives_S1_script/', views.run_Maya_upload_taboola_creatives_S1_script, name='run_Maya_upload_taboola_creatives_S1_script'),
+    path('run_Maya_upload_taboola_creatives_TC_script/', views.run_Maya_upload_taboola_creatives_TC_script, name='run_Maya_upload_taboola_creatives_TC_script'),
+    path('run_Maya_upload_taboola_creatives_RSOC_script/', views.run_Maya_upload_taboola_creatives_RSOC_script, name='run_Maya_upload_taboola_creatives_RSOC_script'),
+    path('run_Maya_upload_taboola_creatives_Inuvo_script/', views.run_Maya_upload_taboola_creatives_Inuvo_script, name='run_Maya_upload_taboola_creatives_Inuvo_script'),
 
     path('run_taboola_Maya_newpolicycheckforall_script/', views.run_taboola_Maya_newpolicycheckforall_script, name='run_taboola_Maya_newpolicycheckforall_script'),
 
@@ -926,16 +948,11 @@ urlpatterns = [
     path('run_taboola_Dina__tchannelsdb_script/', views.run_taboola_Dina__tchannelsdb_script, name='run_taboola_Dina__tchannelsdb_script'),
 
 
+    path('run_Dina_upload_taboola_creatives_S1_script/', views.run_Dina_upload_taboola_creatives_S1_script, name='run_Dina_upload_taboola_creatives_S1_script'),
+    path('run_Dina_upload_taboola_creatives_TC_script/', views.run_Dina_upload_taboola_creatives_TC_script, name='run_Dina_upload_taboola_creatives_TC_script'),
+    path('run_Dina_upload_taboola_creatives_RSOC_script/', views.run_Dina_upload_taboola_creatives_RSOC_script, name='run_Dina_upload_taboola_creatives_RSOC_script'),
+    path('run_Dina_upload_taboola_creatives_Inuvo_script/', views.run_Dina_upload_taboola_creatives_Inuvo_script, name='run_Dina_upload_taboola_creatives_Inuvo_script'),
 
-    # Taboola page - Ilana
-
-    path('taboola_Ilana/', views.taboola_Ilana_page, name='taboola_Ilana_page'),
-    path('run_Ilana_tonic_taboolaoffers_script/', views.run_Ilana_tonic_taboolaoffers_script, name='run_Ilana_tonic_taboolaoffers_script'),
-    path('run_Ilana_rsoctoniccreateofferestaboola_script/', views.run_Ilana_rsoctoniccreateofferestaboola_script, name='run_Ilana_rsoctoniccreateofferestaboola_script'),
-    path('run_Ilana_maxbidstaboola_UPCPCS1_script/', views.run_Ilana_maxbidstaboola_UPCPCS1_script, name='run_Ilana_maxbidstaboola_UPCPCS1_script'),
-    path('run_Ilana_maxbidstaboola_UPCPCRSOC_script/', views.run_Ilana_maxbidstaboola_UPCPCRSOC_script, name='run_Ilana_maxbidstaboola_UPCPCRSOC_script'),
-    path('run_Ilana_maxbidstaboola_UPCPC_script/', views.run_Ilana_maxbidstaboola_UPCPC_script, name='run_Ilana_maxbidstaboola_UPCPC_script'),
-    path('run_Ilana_maxbidstaboola_UPCPCINU_script/', views.run_Ilana_maxbidstaboola_UPCPCINU_script, name='run_Ilana_maxbidstaboola_UPCPCINU_script'),
 
 
     # Taboola page - Or
@@ -959,6 +976,14 @@ urlpatterns = [
     path('run_taboola_Or__tchannels_createnew_script/', views.run_taboola_Or__tchannels_createnew_script, name='run_taboola_Or__tchannels_createnew_script'),
     path('run_taboola_Or__tchannelsdb_script/', views.run_taboola_Or__tchannelsdb_script, name='run_taboola_Or__tchannelsdb_script'),
 
+
+    path('run_Or_upload_taboola_creatives_S1_script/', views.run_Or_upload_taboola_creatives_S1_script, name='run_Or_upload_taboola_creatives_S1_script'),
+    path('run_Or_upload_taboola_creatives_TC_script/', views.run_Or_upload_taboola_creatives_TC_script, name='run_Or_upload_taboola_creatives_TC_script'),
+    path('run_Or_upload_taboola_creatives_RSOC_script/', views.run_Or_upload_taboola_creatives_RSOC_script, name='run_Or_upload_taboola_creatives_RSOC_script'),
+    path('run_Or_upload_taboola_creatives_Inuvo_script/', views.run_Or_upload_taboola_creatives_Inuvo_script, name='run_Or_upload_taboola_creatives_Inuvo_script'),
+
+
+
     # Taboola page - Yoav
 
     path('taboola_Yoav/', views.taboola_Yoav_page, name='taboola_Yoav_page'),
@@ -980,6 +1005,28 @@ urlpatterns = [
 
     path('run_taboola_Yoav__tchannels_createnew_script/', views.run_taboola_Yoav__tchannels_createnew_script, name='run_taboola_Yoav__tchannels_createnew_script'),
     path('run_taboola_Yoav__tchannelsdb_script/', views.run_taboola_Yoav__tchannelsdb_script, name='run_taboola_Yoav__tchannelsdb_script'),
+
+
+    path('run_Yoav_upload_taboola_creatives_S1_script/', views.run_Yoav_upload_taboola_creatives_S1_script, name='run_Yoav_upload_taboola_creatives_S1_script'),
+    path('run_Yoav_upload_taboola_creatives_TC_script/', views.run_Yoav_upload_taboola_creatives_TC_script, name='run_Yoav_upload_taboola_creatives_TC_script'),
+    path('run_Yoav_upload_taboola_creatives_RSOC_script/', views.run_Yoav_upload_taboola_creatives_RSOC_script, name='run_Yoav_upload_taboola_creatives_RSOC_script'),
+    path('run_Yoav_upload_taboola_creatives_Inuvo_script/', views.run_Yoav_upload_taboola_creatives_Inuvo_script, name='run_Yoav_upload_taboola_creatives_Inuvo_script'),
+
+
+
+
+
+
+    # Taboola page - Ilana
+
+    path('taboola_Ilana/', views.taboola_Ilana_page, name='taboola_Ilana_page'),
+    path('run_Ilana_tonic_taboolaoffers_script/', views.run_Ilana_tonic_taboolaoffers_script, name='run_Ilana_tonic_taboolaoffers_script'),
+    path('run_Ilana_rsoctoniccreateofferestaboola_script/', views.run_Ilana_rsoctoniccreateofferestaboola_script, name='run_Ilana_rsoctoniccreateofferestaboola_script'),
+    path('run_Ilana_maxbidstaboola_UPCPCS1_script/', views.run_Ilana_maxbidstaboola_UPCPCS1_script, name='run_Ilana_maxbidstaboola_UPCPCS1_script'),
+    path('run_Ilana_maxbidstaboola_UPCPCRSOC_script/', views.run_Ilana_maxbidstaboola_UPCPCRSOC_script, name='run_Ilana_maxbidstaboola_UPCPCRSOC_script'),
+    path('run_Ilana_maxbidstaboola_UPCPC_script/', views.run_Ilana_maxbidstaboola_UPCPC_script, name='run_Ilana_maxbidstaboola_UPCPC_script'),
+    path('run_Ilana_maxbidstaboola_UPCPCINU_script/', views.run_Ilana_maxbidstaboola_UPCPCINU_script, name='run_Ilana_maxbidstaboola_UPCPCINU_script'),
+
 
     # Taboola page - Dor
 

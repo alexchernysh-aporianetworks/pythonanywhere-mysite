@@ -795,6 +795,10 @@ def run_tcyes_history_script(request):
     return execute_script(request, script_path)
 
 
+def run_dailyfb_test_2_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/dailyfb_test_2.py"
+    return execute_script(request, script_path)
+
 
 
 
@@ -1968,6 +1972,9 @@ def run_Jenia_creatives_builder_script(request):
     script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Jenia_remote.py"
     return execute_script(request, script_path)
 
+#def run_Jenia_creatives_builder_script(request):
+#    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Jenia_remote.py"
+#    return execute_script(request, script_path)
 
         ########
 
@@ -3288,6 +3295,33 @@ def run_taboola_Elad__tchannelsdb_script(request):
 
 
 
+
+
+
+def run_Elad_upload_taboola_creatives_S1_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Elad/upload_taboola_creatives_S1.py"
+    return execute_script(request, script_path)
+
+
+def run_Elad_upload_taboola_creatives_TC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Elad/upload_taboola_creatives_TC.py"
+    return execute_script(request, script_path)
+
+
+def run_Elad_upload_taboola_creatives_RSOC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Elad/upload_taboola_creatives_RSOC.py"
+    return execute_script(request, script_path)
+
+
+def run_Elad_upload_taboola_creatives_Inuvo_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Elad/upload_taboola_creatives_Inuvo.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
     # Taboola page - Elran
 
 
@@ -3380,6 +3414,31 @@ def run_taboola_Elran__tchannelsdb_script(request):
 
 
 
+
+
+
+def run_Elran_upload_taboola_creatives_S1_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Elran/upload_taboola_creatives_S1.py"
+    return execute_script(request, script_path)
+
+
+def run_Elran_upload_taboola_creatives_TC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Elran/upload_taboola_creatives_TC.py"
+    return execute_script(request, script_path)
+
+
+def run_Elran_upload_taboola_creatives_RSOC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Elran/upload_taboola_creatives_RSOC.py"
+    return execute_script(request, script_path)
+
+
+def run_Elran_upload_taboola_creatives_Inuvo_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Elran/upload_taboola_creatives_Inuvo.py"
+    return execute_script(request, script_path)
+
+
+
+
     # Taboola page - Maya
 
 
@@ -3454,6 +3513,28 @@ def run_Maya_tabduplicatorfortest_RSOC_script(request):
 
 def run_Maya_tabduplicatorfortest_TC_script(request):
     script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Maya/tabduplicatorfortest_TC.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+def run_Maya_upload_taboola_creatives_S1_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Maya/upload_taboola_creatives_S1.py"
+    return execute_script(request, script_path)
+
+def run_Maya_upload_taboola_creatives_TC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Maya/upload_taboola_creatives_TC.py"
+    return execute_script(request, script_path)
+
+def run_Maya_upload_taboola_creatives_RSOC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Maya/upload_taboola_creatives_RSOC.py"
+    return execute_script(request, script_path)
+
+def run_Maya_upload_taboola_creatives_Inuvo_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Maya/upload_taboola_creatives_Inuvo.py"
     return execute_script(request, script_path)
 
 
@@ -3573,6 +3654,31 @@ def run_taboola_Dina__tchannelsdb_script(request):
 
 
 
+
+
+
+def run_Dina_upload_taboola_creatives_S1_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Dina/upload_taboola_creatives_S1.py"
+    return execute_script(request, script_path)
+
+
+def run_Dina_upload_taboola_creatives_TC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Dina/upload_taboola_creatives_TC.py"
+    return execute_script(request, script_path)
+
+
+def run_Dina_upload_taboola_creatives_RSOC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Dina/upload_taboola_creatives_RSOC.py"
+    return execute_script(request, script_path)
+
+
+def run_Dina_upload_taboola_creatives_Inuvo_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Dina/upload_taboola_creatives_Inuvo.py"
+    return execute_script(request, script_path)
+
+
+
+
     # Taboola page - Or
 
 
@@ -3664,6 +3770,31 @@ def run_taboola_Or__tchannels_createnew_script(request):
 
 def run_taboola_Or__tchannelsdb_script(request):
     script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Or/tc_channelsdb.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+def run_Or_upload_taboola_creatives_S1_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Or/upload_taboola_creatives_S1.py"
+    return execute_script(request, script_path)
+
+
+def run_Or_upload_taboola_creatives_TC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Or/upload_taboola_creatives_TC.py"
+    return execute_script(request, script_path)
+
+
+def run_Or_upload_taboola_creatives_RSOC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Or/upload_taboola_creatives_RSOC.py"
+    return execute_script(request, script_path)
+
+
+def run_Or_upload_taboola_creatives_Inuvo_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Or/upload_taboola_creatives_Inuvo.py"
     return execute_script(request, script_path)
 
 
@@ -3761,6 +3892,37 @@ def run_taboola_Yoav__tchannels_createnew_script(request):
 def run_taboola_Yoav__tchannelsdb_script(request):
     script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Yoav/tc_channelsdb.py"
     return execute_script(request, script_path)
+
+
+
+
+
+
+
+def run_Yoav_upload_taboola_creatives_S1_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Yoav/upload_taboola_creatives_S1.py"
+    return execute_script(request, script_path)
+
+
+def run_Yoav_upload_taboola_creatives_TC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Yoav/upload_taboola_creatives_TC.py"
+    return execute_script(request, script_path)
+
+
+def run_Yoav_upload_taboola_creatives_RSOC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Yoav/upload_taboola_creatives_RSOC.py"
+    return execute_script(request, script_path)
+
+
+def run_Yoav_upload_taboola_creatives_Inuvo_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Yoav/upload_taboola_creatives_Inuvo.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
 
 
     # Taboola page - Ilana
@@ -6494,9 +6656,6 @@ def run_Or_keywordstokeywords_v3_script(request):
 def run_Or_creatives_builder_script(request):
     script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Or_remote.py"
     return execute_script(request, script_path)
-
-
-
 
 
 
