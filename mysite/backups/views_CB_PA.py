@@ -1965,7 +1965,7 @@ def run_creative_bulk_newpolicycheckforall_script(request):
 
 
 def run_Jenia_creatives_builder_script(request):
-    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Jenia_remote.py"
+    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder/creatives_builder_generate.py"
     return execute_script(request, script_path)
 
 
@@ -6382,7 +6382,7 @@ def run_Elad_keywordstokeywords_v3_script(request):
 
 
 def run_Elad_creatives_builder_script(request):
-    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Elad_remote.py"
+    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder/creatives_builder_Elad.py"
     return execute_script(request, script_path)
 
 
@@ -6401,7 +6401,7 @@ def run_Elran_keywordstokeywords_v3_script(request):
 
 
 def run_Elran_creatives_builder_script(request):
-    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Elran_remote.py"
+    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder/creatives_builder_Elran.py"
     return execute_script(request, script_path)
 
 
@@ -6420,7 +6420,7 @@ def run_Omer_keywordstokeywords_v3_script(request):
 
 
 def run_Omer_creatives_builder_script(request):
-    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Omer_remote.py"
+    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder/creatives_builder_Omer.py"
     return execute_script(request, script_path)
 
 
@@ -6439,7 +6439,7 @@ def run_Dina_keywordstokeywords_v3_script(request):
 
 
 def run_Dina_creatives_builder_script(request):
-    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Dina_remote.py"
+    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder/creatives_builder_Dina.py"
     return execute_script(request, script_path)
 
 
@@ -6458,7 +6458,7 @@ def run_Yoav_keywordstokeywords_v3_script(request):
 
 
 def run_Yoav_creatives_builder_script(request):
-    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Yoav_remote.py"
+    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder/creatives_builder_Yoav.py"
     return execute_script(request, script_path)
 
 
@@ -6492,7 +6492,7 @@ def run_Or_keywordstokeywords_v3_script(request):
 
 
 def run_Or_creatives_builder_script(request):
-    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Or_remote.py"
+    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder/creatives_builder_Or.py"
     return execute_script(request, script_path)
 
 
@@ -6514,7 +6514,7 @@ def run_Maya_keywordstokeywords_v3_script(request):
 
 
 def run_Maya_creatives_builder_script(request):
-    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Maya_remote.py"
+    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder/creatives_builder_Maya.py"
     return execute_script(request, script_path)
 
 
