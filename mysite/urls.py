@@ -189,6 +189,7 @@ urlpatterns = [
     path('run_tabupdatemaxcpcbid_script/', views.run_tabupdatemaxcpcbid_script, name='run_tabupdatemaxcpcbid_script'),
     path('run_maxcpaandcpcbidstaboolaopt_script/', views.run_maxcpaandcpcbidstaboolaopt_script, name='run_maxcpaandcpcbidstaboolaopt_script'),
     path('run_pausetaboolal7nospend_script/', views.run_pausetaboolal7nospend_script, name='run_pausetaboolal7nospend_script'),
+    path('run_tabopt2026_script/', views.run_tabopt2026_script, name='run_tabopt2026_script'),
 
 
     # Taboola page - Wanduum
@@ -346,6 +347,7 @@ urlpatterns = [
     path('run_inuvoopt_script/', views.run_inuvoopt_script, name='run_inuvoopt_script'),
     path('run_tonic_fboffers_script/', views.run_tonic_fboffers_script, name='run_tonic_fboffers_script'),
     path('run_dailyfb_script/', views.run_dailyfb_script, name='run_dailyfb_script'),
+    path('run_fbopt2026_script/', views.run_fbopt2026_script, name='run_fbopt2026_script'),
 
 
     # Compliance
@@ -391,6 +393,7 @@ urlpatterns = [
     path('run_rsoctonicoffersggl_script/', views.run_rsoctonicoffersggl_script, name='run_rsoctonicoffersggl_script'),
     path('run_gglpctsmax_script/', views.run_gglpctsmax_script, name='run_gglpctsmax_script'),
     path('run_gglpctsdemandgen_script/', views.run_gglpctsdemandgen_script, name='run_gglpctsdemandgen_script'),
+    path('run_googleopt2026_script/', views.run_googleopt2026_script, name='run_googleopt2026_script'),
 
 
     path('run_allgoogleyes_v2_script/', views.run_allgoogleyes_v2_script, name='run_allgoogleyes_v2_script'),

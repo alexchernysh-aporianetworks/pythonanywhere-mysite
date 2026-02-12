@@ -1118,6 +1118,14 @@ def run_pausetaboolal7nospend_script(request):
 
 
 
+# Opt
+
+
+def run_tabopt2026_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/Opt/tabopt2026 1.py"
+    return execute_script(request, script_path)
+
+
 # Taboola page - Wanduum
 
 
@@ -1243,7 +1251,6 @@ def run_newtabyesexp_script(request):
 def run_texplore1_script(request):
     script_path = "/home/Karmel/Amit/Taboola/Explore/texplore1.py"
     return execute_script(request, script_path)
-
 
 
 
@@ -1412,6 +1419,11 @@ def run_tonic_fboffers_script(request):
 
 def run_dailyfb_script(request):
     script_path = "/home/Karmel/Amit/Facebook/dailyfb_test_2.py"
+    return execute_script(request, script_path)
+
+
+def run_fbopt2026_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/Opt/fbopt2026 1.py"
     return execute_script(request, script_path)
 
 
@@ -1755,6 +1767,11 @@ def run_allgoogleyes_v2_Shinez_script(request):
 
 def run_googlenospendl7days_Shinez_script(request):
     script_path = "/home/Karmel/Amit/Google/googlenospendl7days-shinez.py"
+    return execute_script(request, script_path)
+
+
+def run_googleopt2026_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/Opt/googleopt2026 1.py"
     return execute_script(request, script_path)
 
 
