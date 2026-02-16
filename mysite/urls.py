@@ -26,6 +26,7 @@ urlpatterns = [
     path('duplicator/', views.duplicator_page, name='duplicator_page'),
     path('sharon/', views.sharon_page, name='sharon_page'),
     path('mgid/', views.mgid_page, name='mgid_page'),
+    path('sasha/', views.sasha_page, name='sasha_page'),
     path('gpt_executor/', views.gpt_executor_page, name='gpt_executor_page'),
     path('karmel_reports/', views.karmel_reports_page, name='karmel_reports_page'),  # Karmel's reports page
     path('running-tasks/', views.running_tasks, name='running_tasks'),
@@ -1987,6 +1988,7 @@ urlpatterns = [
     path('run_Or_keywordstokeywords_v3_script/', views.run_Or_keywordstokeywords_v3_script, name='run_Or_keywordstokeywords_v3_script'),
 
     path('run_Or_creatives_builder_script/', views.run_Or_creatives_builder_script, name='run_Or_creatives_builder_script'),
+    path('run_Sasha_creatives_builder_script/', views.run_Sasha_creatives_builder_script, name='run_Sasha_creatives_builder_script'),
 
 
 

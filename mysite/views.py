@@ -2622,6 +2622,9 @@ def sharon_page(request):
 def mgid_page(request):
     return render(request, "mgid_page.html")
 
+def sasha_page(request):
+    return render(request, "sasha_page.html")
+
 def media_buyers_scripts(request):
     return render(request, "media_buyers_scripts.html")
 
@@ -6684,6 +6687,10 @@ def run_Or_keywordstokeywords_v3_script(request):
 
 def run_Or_creatives_builder_script(request):
     script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Or_remote.py"
+    return execute_script(request, script_path)
+
+def run_Sasha_creatives_builder_script(request):
+    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/api_runners/creatives_builder_Sasha_api.py"
     return execute_script(request, script_path)
 
 
