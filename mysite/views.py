@@ -1122,7 +1122,7 @@ def run_pausetaboolal7nospend_script(request):
 
 
 def run_tabopt2026_script(request):
-    script_path = "/home/Karmel/Amit/Outbrain/Opt/tabopt2026 1.py"
+    script_path = "/home/Karmel/Amit/Taboola/Taboola/tabopt2026 1.py"
     return execute_script(request, script_path)
 
 
@@ -1423,7 +1423,7 @@ def run_dailyfb_script(request):
 
 
 def run_fbopt2026_script(request):
-    script_path = "/home/Karmel/Amit/Outbrain/Opt/fbopt2026 1.py"
+    script_path = "/home/Karmel/Amit/Facebook/Optimization/fbopt2026 1.py"
     return execute_script(request, script_path)
 
 
@@ -1771,7 +1771,7 @@ def run_googlenospendl7days_Shinez_script(request):
 
 
 def run_googleopt2026_script(request):
-    script_path = "/home/Karmel/Amit/Outbrain/Opt/googleopt2026 1.py"
+    script_path = "/home/Karmel/Amit/Google/googleopt2026 1.py"
     return execute_script(request, script_path)
 
 
