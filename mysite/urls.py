@@ -64,6 +64,7 @@ urlpatterns = [
     path('run_sisterscompliancepj_script/', views.run_sisterscompliancepj_script, name='run_sisterscompliancepj_script'),
     path('run_systemnewreport_mobile_script/', views.run_systemnewreport_mobile_script, name='run_systemnewreport_mobile_script'),
     path('run_getkeywordsdata_script/', views.run_getkeywordsdata_script, name='run_getkeywordsdata_script'),
+    path('run_Main_N2S_Today_script/', views.run_Main_N2S_Today_script, name='run_Main_N2S_Today_script'),
 
 
 
@@ -284,6 +285,7 @@ urlpatterns = [
     path('run_MediaGo_Daily_Spend_PAW_script/', views.run_MediaGo_Daily_Spend_PAW_script, name='run_MediaGo_Daily_Spend_PAW_script'),
     path('run_MediaGo_Creative_PAW_script/', views.run_MediaGo_Creative_PAW_script, name='run_MediaGo_Creative_PAW_script'),
     path('run_MediaGo_All_Campaigns_PAW_script/', views.run_MediaGo_All_Campaigns_PAW_script, name='run_MediaGo_All_Campaigns_PAW_script'),
+    path('run_MediaGo_Opt_PAW_script/', views.run_MediaGo_Opt_PAW_script, name='run_MediaGo_Opt_PAW_script'),
 
 
 ################### Poppin page
@@ -361,6 +363,11 @@ urlpatterns = [
     path('run_getfbtonicids_script/', views.run_getfbtonicids_script, name='run_getfbtonicids_script'),
     path('run_facebookcomplianceupdater2025_v3_script/', views.run_facebookcomplianceupdater2025_v3_script, name='run_facebookcomplianceupdater2025_v3_script'),
 
+
+    # Reports
+
+
+    path('run_FB_GGSH_script/', views.run_FB_GGSH_script, name='run_FB_GGSH_script'),
 
 ################### Twitter page
 
@@ -1441,6 +1448,8 @@ urlpatterns = [
     path('run_Or_Manual_imagescut_script/', views.run_Or_Manual_imagescut_script, name='run_Or_Manual_imagescut_script'),
     path('run_Or_Creative_imagescut_script/', views.run_Or_Creative_imagescut_script, name='run_Or_Creative_imagescut_script'),
 
+    path('run_Or_google_uploader_v3_script/', views.run_Or_google_uploader_v3_script, name='run_Or_google_uploader_v3_script'),
+
     path('run_Or_GoogleRSoCTonicActiveLinks_script/', views.run_Or_GoogleRSoCTonicActiveLinks_script, name='run_Or_GoogleRSoCTonicActiveLinks_script'),
     path('run_Or_GoogleRSoCTonicCreatLinks_script/', views.run_Or_GoogleRSoCTonicCreatLinks_script, name='run_Or_GoogleRSoCTonicCreatLinks_script'),
 
@@ -1459,6 +1468,8 @@ urlpatterns = [
     path('google_Dina/', views.google_Dina_page, name='google_Dina_page'),
     path('run_Dina_Manual_imagescut_script/', views.run_Dina_Manual_imagescut_script, name='run_Dina_Manual_imagescut_script'),
     path('run_Dina_Creative_imagescut_script/', views.run_Dina_Creative_imagescut_script, name='run_Dina_Creative_imagescut_script'),
+
+    path('run_Dina_google_uploader_v3_script/', views.run_Dina_google_uploader_v3_script, name='run_Dina_google_uploader_v3_script'),
 
     path('run_Dina_GoogleRSoCTonicActiveLinks_script/', views.run_Dina_GoogleRSoCTonicActiveLinks_script, name='run_Dina_GoogleRSoCTonicActiveLinks_script'),
     path('run_Dina_GoogleRSoCTonicCreatLinks_script/', views.run_Dina_GoogleRSoCTonicCreatLinks_script, name='run_Dina_GoogleRSoCTonicCreatLinks_script'),
@@ -1482,6 +1493,8 @@ urlpatterns = [
     path('run_Yoav_Manual_imagescut_script/', views.run_Yoav_Manual_imagescut_script, name='run_Yoav_Manual_imagescut_script'),
     path('run_Yoav_Creative_imagescut_script/', views.run_Yoav_Creative_imagescut_script, name='run_Yoav_Creative_imagescut_script'),
 
+    path('run_Yoav_google_uploader_v3_script/', views.run_Yoav_google_uploader_v3_script, name='run_Yoav_google_uploader_v3_script'),
+
     path('run_Yoav_GoogleRSoCTonicActiveLinks_script/', views.run_Yoav_GoogleRSoCTonicActiveLinks_script, name='run_Yoav_GoogleRSoCTonicActiveLinks_script'),
     path('run_Yoav_GoogleRSoCTonicCreatLinks_script/', views.run_Yoav_GoogleRSoCTonicCreatLinks_script, name='run_Yoav_GoogleRSoCTonicCreatLinks_script'),
 
@@ -1502,6 +1515,9 @@ urlpatterns = [
 
     path('run_Elad_Manual_imagescut_script/', views.run_Elad_Manual_imagescut_script, name='run_Elad_Manual_imagescut_script'),
     path('run_Elad_Creative_imagescut_script/', views.run_Elad_Creative_imagescut_script, name='run_Elad_Creative_imagescut_script'),
+
+    path('run_Elad_google_uploader_v3_script/', views.run_Elad_google_uploader_v3_script, name='run_Elad_google_uploader_v3_script'),
+
 
     path('run_Elad_GoogleRSoCTonicActiveLinks_script/', views.run_Elad_GoogleRSoCTonicActiveLinks_script, name='run_Elad_GoogleRSoCTonicActiveLinks_script'),
     path('run_Elad_GoogleRSoCTonicCreatLinks_script/', views.run_Elad_GoogleRSoCTonicCreatLinks_script, name='run_Elad_GoogleRSoCTonicCreatLinks_script'),
@@ -1524,6 +1540,8 @@ urlpatterns = [
     path('google_Elran/', views.google_Elran_page, name='google_Elran_page'),
     path('run_Elran_Manual_imagescut_script/', views.run_Elran_Manual_imagescut_script, name='run_Elran_Manual_imagescut_script'),
     path('run_Elran_Creative_imagescut_script/', views.run_Elran_Creative_imagescut_script, name='run_Elran_Creative_imagescut_script'),
+
+    path('run_Elran_google_uploader_v3_script/', views.run_Elran_google_uploader_v3_script, name='run_Elran_google_uploader_v3_script'),
 
     path('run_Elran_GoogleRSoCTonicActiveLinks_script/', views.run_Elran_GoogleRSoCTonicActiveLinks_script, name='run_Elran_GoogleRSoCTonicActiveLinks_script'),
     path('run_Elran_GoogleRSoCTonicCreatLinks_script/', views.run_Elran_GoogleRSoCTonicCreatLinks_script, name='run_Elran_GoogleRSoCTonicCreatLinks_script'),
@@ -2168,6 +2186,124 @@ urlpatterns = [
     path('run_outbrain_Elran__tchannelsdb_script/', views.run_outbrain_Elran__tchannelsdb_script, name='run_outbrain_Elran__tchannelsdb_script'),
 
     path('run_Elran_outbrain_uploader_script/', views.run_Elran_outbrain_uploader_script, name='run_Elran_outbrain_uploader_script'),
+
+
+
+
+
+
+
+
+
+
+
+
+    #### Guy #####
+
+
+    path('media_buyer_Guy_page/', views.media_buyer_Guy_page, name='media_buyer_Guy_page'),
+
+    path('run_Guy_FBRSoCTonicCreatLinks_script/', views.run_Guy_FBRSoCTonicCreatLinks_script, name='run_Guy_FBRSoCTonicCreatLinks_script'),
+    path('run_Guy_tonic_FBoffers_script/', views.run_Guy_tonic_FBoffers_script, name='run_Guy_tonic_FBoffers_script'),
+    path('run_Guy_FBRSoCTonicCreatpixel_script/', views.run_Guy_FBRSoCTonicCreatpixel_script, name='run_Guy_FBRSoCTonicCreatpixel_script'),
+    path('run_Guy_FBRSoCTonicCreat_link_pixel_script/', views.run_Guy_FBRSoCTonicCreat_link_pixel_script, name='run_Guy_FBRSoCTonicCreat_link_pixel_script'),
+
+    path('run_facebook_Guy_tc_channels_createnew_script/', views.run_facebook_Guy_tc_channels_createnew_script, name='run_facebook_Guy_tc_channels_createnew_script'),
+    path('run_facebook_Guy_tc_channelsdb_script/', views.run_facebook_Guy_tc_channelsdb_script, name='run_facebook_Guy_tc_channelsdb_script'),
+    path('run_facebook_Guy_Extract_TXT_IMG_script/', views.run_facebook_Guy_Extract_TXT_IMG_script, name='run_facebook_Guy_Extract_TXT_IMG_script'),
+
+    path('run_Guy_fb_uploader_v26_script/', views.run_Guy_fb_uploader_v26_script, name='run_Guy_fb_uploader_v26_script'),
+
+
+    path('run_Guy_rsoctoniccreateofferesoutbrain_script/', views.run_Guy_rsoctoniccreateofferesoutbrain_script, name='run_Guy_rsoctoniccreateofferesoutbrain_script'),
+    path('run_Guy_tonic_outbrainoffers_script/', views.run_Guy_tonic_outbrainoffers_script, name='run_Guy_tonic_outbrainoffers_script'),
+
+    path('run_outbrain_Guy__tchannels_createnew_script/', views.run_outbrain_Guy__tchannels_createnew_script, name='run_outbrain_Guy__tchannels_createnew_script'),
+    path('run_outbrain_Guy__tchannelsdb_script/', views.run_outbrain_Guy__tchannelsdb_script, name='run_outbrain_Guy__tchannelsdb_script'),
+
+    path('run_Guy_outbrain_uploader_script/', views.run_Guy_outbrain_uploader_script, name='run_Guy_outbrain_uploader_script'),
+
+
+
+    path('run_Guy_tonic_taboolaoffers_script/', views.run_Guy_tonic_taboolaoffers_script, name='run_Guy_tonic_taboolaoffers_script'),
+    path('run_Guy_rsoctoniccreateofferestaboola_script/', views.run_Guy_rsoctoniccreateofferestaboola_script, name='run_Guy_rsoctoniccreateofferestaboola_script'),
+
+    path('run_Guy_tabduplicatorfortest_s1_script/', views.run_Guy_tabduplicatorfortest_s1_script, name='run_Guy_tabduplicatorfortest_s1_script'),
+    path('run_Guy_tabduplicatorfortest_Inuvo_script/', views.run_Guy_tabduplicatorfortest_Inuvo_script, name='run_Guy_tabduplicatorfortest_Inuvo_script'),
+    path('run_Guy_tabduplicatorfortest_AFD_script/', views.run_Guy_tabduplicatorfortest_AFD_script, name='run_Guy_tabduplicatorfortest_AFD_script'),
+    path('run_Guy_tabduplicatorfortest_RSOC_script/', views.run_Guy_tabduplicatorfortest_RSOC_script, name='run_Guy_tabduplicatorfortest_RSOC_script'),
+    path('run_Guy_tabduplicatorfortest_TC_script/', views.run_Guy_tabduplicatorfortest_TC_script, name='run_Guy_tabduplicatorfortest_TC_script'),
+
+    path('run_taboola_Guy_newpolicycheckforall_script/', views.run_taboola_Guy_newpolicycheckforall_script, name='run_taboola_Guy_newpolicycheckforall_script'),
+
+
+    path('run_taboola_Guy__tchannels_createnew_script/', views.run_taboola_Guy__tchannels_createnew_script, name='run_taboola_Guy__tchannels_createnew_script'),
+    path('run_taboola_Guy__tchannelsdb_script/', views.run_taboola_Guy__tchannelsdb_script, name='run_taboola_Guy__tchannelsdb_script'),
+
+    path('run_Guy_upload_taboola_creatives_S1_script/', views.run_Guy_upload_taboola_creatives_S1_script, name='run_Guy_upload_taboola_creatives_S1_script'),
+    path('run_Guy_upload_taboola_creatives_TC_script/', views.run_Guy_upload_taboola_creatives_TC_script, name='run_Guy_upload_taboola_creatives_TC_script'),
+    path('run_Guy_upload_taboola_creatives_RSOC_script/', views.run_Guy_upload_taboola_creatives_RSOC_script, name='run_Guy_upload_taboola_creatives_RSOC_script'),
+    path('run_Guy_upload_taboola_creatives_Inuvo_script/', views.run_Guy_upload_taboola_creatives_Inuvo_script, name='run_Guy_upload_taboola_creatives_Inuvo_script'),
+
+    path('run_Guy_keywordsanalyze_script/', views.run_Guy_keywordsanalyze_script, name='run_Guy_keywordsanalyze_script'),
+    path('run_Guy_keywordstokeywords_v3_script/', views.run_Guy_keywordstokeywords_v3_script, name='run_Guy_keywordstokeywords_v3_script'),
+    path('run_Guy_creatives_builder_script/', views.run_Guy_creatives_builder_script, name='run_Guy_creatives_builder_script'),
+
+
+
+
+    #### Sahar #####
+
+
+
+
+    path('media_buyer_Sahar_page/', views.media_buyer_Sahar_page, name='media_buyer_Sahar_page'),
+
+    path('run_Sahar_FBRSoCTonicCreatLinks_script/', views.run_Sahar_FBRSoCTonicCreatLinks_script, name='run_Sahar_FBRSoCTonicCreatLinks_script'),
+    path('run_Sahar_tonic_FBoffers_script/', views.run_Sahar_tonic_FBoffers_script, name='run_Sahar_tonic_FBoffers_script'),
+    path('run_Sahar_FBRSoCTonicCreatpixel_script/', views.run_Sahar_FBRSoCTonicCreatpixel_script, name='run_Sahar_FBRSoCTonicCreatpixel_script'),
+    path('run_Sahar_FBRSoCTonicCreat_link_pixel_script/', views.run_Sahar_FBRSoCTonicCreat_link_pixel_script, name='run_Sahar_FBRSoCTonicCreat_link_pixel_script'),
+
+    path('run_facebook_Sahar_tc_channels_createnew_script/', views.run_facebook_Sahar_tc_channels_createnew_script, name='run_facebook_Sahar_tc_channels_createnew_script'),
+    path('run_facebook_Sahar_tc_channelsdb_script/', views.run_facebook_Sahar_tc_channelsdb_script, name='run_facebook_Sahar_tc_channelsdb_script'),
+    path('run_facebook_Sahar_Extract_TXT_IMG_script/', views.run_facebook_Sahar_Extract_TXT_IMG_script, name='run_facebook_Sahar_Extract_TXT_IMG_script'),
+
+    path('run_Sahar_fb_uploader_v26_script/', views.run_Sahar_fb_uploader_v26_script, name='run_Sahar_fb_uploader_v26_script'),
+
+
+    path('run_Sahar_rsoctoniccreateofferesoutbrain_script/', views.run_Sahar_rsoctoniccreateofferesoutbrain_script, name='run_Sahar_rsoctoniccreateofferesoutbrain_script'),
+    path('run_Sahar_tonic_outbrainoffers_script/', views.run_Sahar_tonic_outbrainoffers_script, name='run_Sahar_tonic_outbrainoffers_script'),
+
+    path('run_outbrain_Sahar__tchannels_createnew_script/', views.run_outbrain_Sahar__tchannels_createnew_script, name='run_outbrain_Sahar__tchannels_createnew_script'),
+    path('run_outbrain_Sahar__tchannelsdb_script/', views.run_outbrain_Sahar__tchannelsdb_script, name='run_outbrain_Sahar__tchannelsdb_script'),
+
+    path('run_Sahar_outbrain_uploader_script/', views.run_Sahar_outbrain_uploader_script, name='run_Sahar_outbrain_uploader_script'),
+
+
+
+    path('run_Sahar_tonic_taboolaoffers_script/', views.run_Sahar_tonic_taboolaoffers_script, name='run_Sahar_tonic_taboolaoffers_script'),
+    path('run_Sahar_rsoctoniccreateofferestaboola_script/', views.run_Sahar_rsoctoniccreateofferestaboola_script, name='run_Sahar_rsoctoniccreateofferestaboola_script'),
+
+    path('run_Sahar_tabduplicatorfortest_s1_script/', views.run_Sahar_tabduplicatorfortest_s1_script, name='run_Sahar_tabduplicatorfortest_s1_script'),
+    path('run_Sahar_tabduplicatorfortest_Inuvo_script/', views.run_Sahar_tabduplicatorfortest_Inuvo_script, name='run_Sahar_tabduplicatorfortest_Inuvo_script'),
+    path('run_Sahar_tabduplicatorfortest_AFD_script/', views.run_Sahar_tabduplicatorfortest_AFD_script, name='run_Sahar_tabduplicatorfortest_AFD_script'),
+    path('run_Sahar_tabduplicatorfortest_RSOC_script/', views.run_Sahar_tabduplicatorfortest_RSOC_script, name='run_Sahar_tabduplicatorfortest_RSOC_script'),
+    path('run_Sahar_tabduplicatorfortest_TC_script/', views.run_Sahar_tabduplicatorfortest_TC_script, name='run_Sahar_tabduplicatorfortest_TC_script'),
+
+    path('run_taboola_Sahar_newpolicycheckforall_script/', views.run_taboola_Sahar_newpolicycheckforall_script, name='run_taboola_Sahar_newpolicycheckforall_script'),
+
+
+    path('run_taboola_Sahar__tchannels_createnew_script/', views.run_taboola_Sahar__tchannels_createnew_script, name='run_taboola_Sahar__tchannels_createnew_script'),
+    path('run_taboola_Sahar__tchannelsdb_script/', views.run_taboola_Sahar__tchannelsdb_script, name='run_taboola_Sahar__tchannelsdb_script'),
+
+    path('run_Sahar_upload_taboola_creatives_S1_script/', views.run_Sahar_upload_taboola_creatives_S1_script, name='run_Sahar_upload_taboola_creatives_S1_script'),
+    path('run_Sahar_upload_taboola_creatives_TC_script/', views.run_Sahar_upload_taboola_creatives_TC_script, name='run_Sahar_upload_taboola_creatives_TC_script'),
+    path('run_Sahar_upload_taboola_creatives_RSOC_script/', views.run_Sahar_upload_taboola_creatives_RSOC_script, name='run_Sahar_upload_taboola_creatives_RSOC_script'),
+    path('run_Sahar_upload_taboola_creatives_Inuvo_script/', views.run_Sahar_upload_taboola_creatives_Inuvo_script, name='run_Sahar_upload_taboola_creatives_Inuvo_script'),
+
+    path('run_Sahar_keywordsanalyze_script/', views.run_Sahar_keywordsanalyze_script, name='run_Sahar_keywordsanalyze_script'),
+    path('run_Sahar_keywordstokeywords_v3_script/', views.run_Sahar_keywordstokeywords_v3_script, name='run_Sahar_keywordstokeywords_v3_script'),
+    path('run_Sahar_creatives_builder_script/', views.run_Sahar_creatives_builder_script, name='run_Sahar_creatives_builder_script'),
 
 
 
