@@ -678,6 +678,12 @@ def run_getkeywordsdata_script(request):
     script_path = "/home/Karmel/Amit/Amit/getkeywordsdata.py"
     return execute_script(request, script_path)
 
+def run_Main_N2S_Today_script(request):
+    script_path = "/home/Karmel/Amit/Auto_Runs/Run_Main_N2S_Today.py"
+    return execute_script(request, script_path)
+
+
+
 #def run_newtabyes3_script(request):
     #return HttpResponseRedirect('https://www.pythonanywhere.com/user/Karmel/files/home/Karmel/Amit/newtabyes3.py?edit')
 
@@ -1466,6 +1472,19 @@ def run_facebookcomplianceupdater2025_v3_script(request):
 
 
 
+    # Reports
+
+
+
+
+def run_FB_GGSH_script(request):
+    script_path = "/home/Karmel/Amit/Auto_Runs/Run_FB_GGSH.py"
+    return execute_script(request, script_path)
+
+
+
+
+
 ############## Mediago scripts
 
 
@@ -1584,6 +1603,10 @@ def run_MediaGo_All_Campaigns_PAW_script(request):
     return execute_script(request, script_path)
 
 
+def run_MediaGo_Opt_PAW_script(request):
+    script_path = "/home/Karmel/Amit/MediaGo/MediaGo_Opt_PAW.py"
+    return execute_script(request, script_path)
+
 
 
 
@@ -1603,7 +1626,7 @@ def run_poppinyes_script(request):
     return execute_script(request, script_path)
 
 def run_tonic_poppinoffers_script(request):
-    script_path = "/home/Karmel/Amit/Poppin/tonic-poppinoffers.py"
+    script_path = "/home/Karmel/Amit/Poppin/tonic-poppinoffers_new.py"
     return execute_script(request, script_path)
 
 def run_poppintonic_L7_script(request):
@@ -5153,6 +5176,14 @@ def run_Or_Creative_imagescut_script(request):
 
 
 
+def run_Or_google_uploader_v3_script(request):
+    script_path = "/home/Karmel/Amit/Google/TeamSheets/Or/google_uploader_v3_image_test.py"
+    return execute_script(request, script_path)
+
+
+
+
+
 def run_Or_GoogleRSoCTonicActiveLinks_script(request):
     script_path = "/home/Karmel/Amit/Google/TeamSheets/Or/GoogleRSoCTonicActiveLinks.py"
     return execute_script(request, script_path)
@@ -5212,6 +5243,14 @@ def run_Dina_Manual_imagescut_script(request):
 def run_Dina_Creative_imagescut_script(request):
     script_path = "/home/Karmel/Amit/Google/TeamSheets/Dina/Creative_imagescut.py"
     return execute_script(request, script_path)
+
+
+
+
+def run_Dina_google_uploader_v3_script(request):
+    script_path = "/home/Karmel/Amit/Google/TeamSheets/Dina/google_uploader_v3_image_test.py"
+    return execute_script(request, script_path)
+
 
 
 
@@ -5280,6 +5319,12 @@ def run_Yoav_Creative_imagescut_script(request):
 
 
 
+def run_Yoav_google_uploader_v3_script(request):
+    script_path = "/home/Karmel/Amit/Google/TeamSheets/Yoav/google_uploader_v3_image_test.py.py"
+    return execute_script(request, script_path)
+
+
+
 
 def run_Yoav_GoogleRSoCTonicActiveLinks_script(request):
     script_path = "/home/Karmel/Amit/Google/TeamSheets/Yoav/GoogleRSoCTonicActiveLinks.py"
@@ -5339,6 +5384,13 @@ def run_Elad_Manual_imagescut_script(request):
 
 def run_Elad_Creative_imagescut_script(request):
     script_path = "/home/Karmel/Amit/Google/TeamSheets/Elad/Creative_imagescut.py"
+    return execute_script(request, script_path)
+
+
+
+
+def run_Elad_google_uploader_v3_script(request):
+    script_path = "/home/Karmel/Amit/Google/TeamSheets/Elad/google_uploader_v3_image_test.py"
     return execute_script(request, script_path)
 
 
@@ -5409,6 +5461,14 @@ def run_Elran_Manual_imagescut_script(request):
 def run_Elran_Creative_imagescut_script(request):
     script_path = "/home/Karmel/Amit/Google/TeamSheets/Elran/Creative_imagescut.py"
     return execute_script(request, script_path)
+
+
+
+
+def run_Elran_google_uploader_v3_script(request):
+    script_path = "/home/Karmel/Amit/Google/TeamSheets/Elran/google_uploader_v3_image_test.py"
+    return execute_script(request, script_path)
+
 
 
 
@@ -7283,3 +7343,458 @@ def run_Elran_outbrain_uploader_script(request):
 
 
 
+
+    #### Guy #####
+
+
+def media_buyer_Guy_page(request):
+    return render(request, 'media_buyers/Guy.html')
+
+
+    #### Facebook
+
+
+
+def run_Guy_FBRSoCTonicCreatLinks_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Guy/FBRSoCTonicCreatLinks.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_tonic_FBoffers_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Guy/tonic-fboffers.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_FBRSoCTonicCreatpixel_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Guy/FBRSoCTonicCreatpixel.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_FBRSoCTonicCreat_link_pixel_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Guy/FBRSoCTonicCreat_link_pixel.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+def run_facebook_Guy_tc_channels_createnew_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Guy/tc_channels_createnew.py"
+    return execute_script(request, script_path)
+
+
+def run_facebook_Guy_tc_channelsdb_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Guy/tc_channelsdb.py"
+    return execute_script(request, script_path)
+
+
+def run_facebook_Guy_Extract_TXT_IMG_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Guy/Extract_TXT_IMG.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+def run_Guy_fb_uploader_v26_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Guy/fb_uploader_v26.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+
+    #### Outbrain
+
+
+
+
+def run_Guy_rsoctoniccreateofferesoutbrain_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/TeamSheets/Guy/rsoctoniccreateofferesoutbrain.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_tonic_outbrainoffers_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/TeamSheets/Guy/tonic_outbrainoffers.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+def run_outbrain_Guy__tchannels_createnew_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/TeamSheets/Guy/tc_channels_createnew.py"
+    return execute_script(request, script_path)
+
+
+def run_outbrain_Guy__tchannelsdb_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/TeamSheets/Guy/tc_channelsdb.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+def run_Guy_outbrain_uploader_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/TeamSheets/Guy/outbrain_uploader.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+
+    #### Taboola
+
+
+
+def run_Guy_tonic_taboolaoffers_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/tonic-taboolaoffers.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_rsoctoniccreateofferestaboola_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/rsoctoniccreateofferestaboola.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+def run_Guy_tabduplicatorfortest_s1_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/tabduplicatorfortest_s1.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_tabduplicatorfortest_Inuvo_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/tabduplicatorfortest_Inuvo.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_tabduplicatorfortest_AFD_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/tabduplicatorfortest_AFD.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_tabduplicatorfortest_RSOC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/tabduplicatorfortest_RSOC.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_tabduplicatorfortest_TC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/tabduplicatorfortest_TC.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+def run_taboola_Guy_newpolicycheckforall_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/newpolicycheckforall.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+
+def run_taboola_Guy__tchannels_createnew_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/tc_channels_createnew.py"
+    return execute_script(request, script_path)
+
+
+def run_taboola_Guy__tchannelsdb_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/tc_channelsdb.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+def run_Guy_upload_taboola_creatives_S1_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/upload_taboola_creatives_S1.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_upload_taboola_creatives_TC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/upload_taboola_creatives_TC.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_upload_taboola_creatives_RSOC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/upload_taboola_creatives_RSOC.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_upload_taboola_creatives_Inuvo_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Guy/upload_taboola_creatives_Inuvo.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+    #### WTHMM
+
+
+
+
+def run_Guy_keywordsanalyze_script(request):
+    script_path = "/home/Karmel/Amit/Amit/creative_2/KW_scripts/Guy/keywordsanalyze.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_keywordstokeywords_v3_script(request):
+    script_path = "/home/Karmel/Amit/Amit/creative_2/KW_scripts/Guy/keywordstokeywords_v3.py"
+    return execute_script(request, script_path)
+
+
+def run_Guy_creatives_builder_script(request):
+    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Guy_remote.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #### Sahar #####
+
+
+def media_buyer_Sahar_page(request):
+    return render(request, 'media_buyers/Sahar.html')
+
+
+    #### Facebook
+
+
+
+def run_Sahar_FBRSoCTonicCreatLinks_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Sahar/FBRSoCTonicCreatLinks.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_tonic_FBoffers_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Sahar/tonic-fboffers.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_FBRSoCTonicCreatpixel_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Sahar/FBRSoCTonicCreatpixel.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_FBRSoCTonicCreat_link_pixel_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Sahar/FBRSoCTonicCreat_link_pixel.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+def run_facebook_Sahar_tc_channels_createnew_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Sahar/tc_channels_createnew.py"
+    return execute_script(request, script_path)
+
+
+def run_facebook_Sahar_tc_channelsdb_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Sahar/tc_channelsdb.py"
+    return execute_script(request, script_path)
+
+
+def run_facebook_Sahar_Extract_TXT_IMG_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Sahar/Extract_TXT_IMG.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+def run_Sahar_fb_uploader_v26_script(request):
+    script_path = "/home/Karmel/Amit/Facebook/TeamSheets/Sahar/fb_uploader_v26.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+
+    #### Outbrain
+
+
+
+
+def run_Sahar_rsoctoniccreateofferesoutbrain_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/TeamSheets/Sahar/rsoctoniccreateofferesoutbrain.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_tonic_outbrainoffers_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/TeamSheets/Sahar/tonic_outbrainoffers.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+def run_outbrain_Sahar__tchannels_createnew_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/TeamSheets/Sahar/tc_channels_createnew.py"
+    return execute_script(request, script_path)
+
+
+def run_outbrain_Sahar__tchannelsdb_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/TeamSheets/Sahar/tc_channelsdb.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+def run_Sahar_outbrain_uploader_script(request):
+    script_path = "/home/Karmel/Amit/Outbrain/TeamSheets/Sahar/outbrain_uploader.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+
+    #### Taboola
+
+
+
+def run_Sahar_tonic_taboolaoffers_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/tonic-taboolaoffers.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_rsoctoniccreateofferestaboola_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/rsoctoniccreateofferestaboola.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+def run_Sahar_tabduplicatorfortest_s1_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/tabduplicatorfortest_s1.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_tabduplicatorfortest_Inuvo_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/tabduplicatorfortest_Inuvo.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_tabduplicatorfortest_AFD_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/tabduplicatorfortest_AFD.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_tabduplicatorfortest_RSOC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/tabduplicatorfortest_RSOC.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_tabduplicatorfortest_TC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/tabduplicatorfortest_TC.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+def run_taboola_Sahar_newpolicycheckforall_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/newpolicycheckforall.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+
+def run_taboola_Sahar__tchannels_createnew_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/tc_channels_createnew.py"
+    return execute_script(request, script_path)
+
+
+def run_taboola_Sahar__tchannelsdb_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/tc_channelsdb.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+
+
+def run_Sahar_upload_taboola_creatives_S1_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/upload_taboola_creatives_S1.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_upload_taboola_creatives_TC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/upload_taboola_creatives_TC.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_upload_taboola_creatives_RSOC_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/upload_taboola_creatives_RSOC.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_upload_taboola_creatives_Inuvo_script(request):
+    script_path = "/home/Karmel/Amit/Taboola/TeamSheets/Sahar/upload_taboola_creatives_Inuvo.py"
+    return execute_script(request, script_path)
+
+
+
+
+
+    #### WTHMM
+
+
+
+
+def run_Sahar_keywordsanalyze_script(request):
+    script_path = "/home/Karmel/Amit/Amit/creative_2/KW_scripts/Sahar/keywordsanalyze.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_keywordstokeywords_v3_script(request):
+    script_path = "/home/Karmel/Amit/Amit/creative_2/KW_scripts/Sahar/keywordstokeywords_v3.py"
+    return execute_script(request, script_path)
+
+
+def run_Sahar_creatives_builder_script(request):
+    script_path = "/home/Karmel/Aporia_Networks/workflows/creative_builder_dev/remote/creatives_builder_Sahar_remote.py"
+    return execute_script(request, script_path)
