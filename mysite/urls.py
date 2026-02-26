@@ -27,6 +27,7 @@ urlpatterns = [
     path('sharon/', views.sharon_page, name='sharon_page'),
     path('mgid/', views.mgid_page, name='mgid_page'),
     path('sasha/', views.sasha_page, name='sasha_page'),
+    path('rss_articles_db/', views.rss_articles_db_page, name='rss_articles_db_page'),
     path('gpt_executor/', views.gpt_executor_page, name='gpt_executor_page'),
     path('karmel_reports/', views.karmel_reports_page, name='karmel_reports_page'),  # Karmel's reports page
     path('running-tasks/', views.running_tasks, name='running_tasks'),
@@ -1989,6 +1990,8 @@ urlpatterns = [
 
     path('run_Or_creatives_builder_script/', views.run_Or_creatives_builder_script, name='run_Or_creatives_builder_script'),
     path('run_Sasha_creatives_builder_script/', views.run_Sasha_creatives_builder_script, name='run_Sasha_creatives_builder_script'),
+    path('run_fetch_all_articles_summaries_script/', views.run_fetch_all_articles_summaries_script, name='run_fetch_all_articles_summaries_script'),
+    path('run_fetch_specific_articles_with_content_script/', views.run_fetch_specific_articles_with_content_script, name='run_fetch_specific_articles_with_content_script'),
 
 
 

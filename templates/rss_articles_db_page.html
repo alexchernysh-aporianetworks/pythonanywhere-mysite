@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS Articles DB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .home-button {
+            margin-bottom: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .button-container {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #444;
+            margin: 8px 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-button">
+        <form method="get" action="{% url 'run_scripts_page' %}">
+            <button type="submit">Home</button>
+        </form>
+    </div>
+
+    <h1>RSS Articles DB</h1>
+
+    <div class="section">
+        <h2 class="section-title">Fetch all articles summaries</h2>
+        <div class="button-container">
+            <form method="get" action="{% url 'run_fetch_all_articles_summaries_script' %}">
+                <button type="submit">Run fetch_all_articles_summaries</button>
+            </form>
+            <p class="meta">Script: /home/Karmel/Aporia_Networks/workflows/articles_db_fetcher/fetch_all_articles_summaries.py</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Fetch specific articles with content (WA tab)</h2>
+        <div class="button-container">
+            <form method="get" action="{% url 'run_fetch_specific_articles_with_content_script' %}">
+                <button type="submit">Run fetch_specific_articles_with_content</button>
+            </form>
+            <p class="meta">Script: /home/Karmel/Aporia_Networks/workflows/articles_db_fetcher/fetch_specific_articles_with_content.py</p>
+        </div>
+    </div>
+</body>
+</html>

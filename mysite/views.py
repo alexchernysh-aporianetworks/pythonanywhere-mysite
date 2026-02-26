@@ -2625,6 +2625,17 @@ def mgid_page(request):
 def sasha_page(request):
     return render(request, "sasha_page.html")
 
+def rss_articles_db_page(request):
+    return render(request, "rss_articles_db_page.html")
+
+def run_fetch_all_articles_summaries_script(request):
+    script_path = "/home/Karmel/Aporia_Networks/workflows/articles_db_fetcher/fetch_all_articles_summaries.py"
+    return execute_script(request, script_path)
+
+def run_fetch_specific_articles_with_content_script(request):
+    script_path = "/home/Karmel/Aporia_Networks/workflows/articles_db_fetcher/fetch_specific_articles_with_content.py"
+    return execute_script(request, script_path)
+
 def media_buyers_scripts(request):
     return render(request, "media_buyers_scripts.html")
 
